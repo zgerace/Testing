@@ -1,0 +1,33 @@
+//
+// Sections
+// --------------------------------------------------
+
+// Section Spacing
+// -------------------------
+
+$insets: (0px, 30px, 60px, 70px, 80px, 90px, 100px, 120px, 140px, 200px, 220px);
+
+@include indent-responsive(section, '', (padding-top, padding-bottom), $medias, $insets);
+@include indent-responsive(section, top, padding-top, $medias, $insets);
+@include indent-responsive(section, bottom, padding-bottom, $medias, $insets);
+
+
+@media (max-width: 1200px) {
+  .section-grid-demonstration [class*="col-"] h5 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .section-grid-demonstration [class*="col-"] p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-grid-demonstration [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

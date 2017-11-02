@@ -1,0 +1,368 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  position: relative;
+  transition: .3s ease-out;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 900;
+  border-radius: 0;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,.23);
+  border: none;
+  padding: 16px 35px;
+  z-index: 1;
+  overflow: hidden;
+
+  @media (min-width: $screen-sm-min) {
+    padding: 18px 49px;
+  }
+
+  &:hover{
+  }
+
+  &:focus,
+  &:active,
+  &:active:focus{
+    outline: none;
+  }
+
+  &:active,
+  &.active {
+    @include box-shadow(none);
+  }
+}
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  @include button-variant-custom($brand-primary-dr, $white, $brand-primary-dr, $white, $brand-primary-dr, $brand-primary-dr);
+
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border: 2px solid $brand-primary-dr;
+    transition: .4s;
+    z-index: -1;
+  }
+}
+
+.btn-white {
+  @include button-variant-custom($brand-primary-dr, $white, $white, $brand-primary-dr, $white, $white);
+}
+.btn-white-variant-1 {
+  @include button-variant-custom($white, transparent, $white, $gray-dark, $white, $white);
+
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border: 2px solid $white;
+    transition: .4s;
+    z-index: -1;
+  }
+}
+
+.btn-steel {
+  @include button-variant-custom($white, $brand-steel, $brand-steel, $white, darken($brand-steel, 10%), darken($brand-steel, 10%));
+}
+
+.btn-picton {
+  @include button-variant-custom($white, $brand-picton, $brand-picton, $white, darken($brand-picton, 10%), darken($brand-picton, 10%));
+}
+
+.btn-primary {
+  @include button-variant-custom($white, $brand-primary, $brand-primary, $white, $brand-info-dr, $brand-info-dr);
+  background: linear-gradient(0deg, $brand-primary-dr 0%, $brand-primary 100%);
+
+  &:after{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: linear-gradient(0deg, $brand-info 0%, $brand-info-dr 100%);
+    transition: .4s;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover{
+    &:after{
+      opacity: 1;
+    }
+
+  }
+}
+
+.btn-no-shadow{
+  box-shadow: none;
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xxs{
+  padding: 10px 20px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.btn-xs {
+  letter-spacing: 0.1em;
+  padding: 9px 38px;
+
+  .icon{
+    font-size: 14px;
+
+    &.mdi{
+      font-size: 20px;
+    }
+  }
+}
+
+.btn-sm {
+  padding: 14px 39px 13px;
+
+  .icon{
+    font-size: 16px;
+
+    &.mdi{
+      font-size: 24px;
+    }
+  }
+} 
+
+html .btn-tag{
+  font-size: 12px;
+  padding: 10px 19px;
+  border: 1px solid $brand-primary;
+  color: $brand-primary-dr;
+  background-color: #fff;
+
+  &:hover,
+  &:focus{
+    background-color: $brand-primary;
+  }
+
+  &-info{
+    color: $brand-info;
+    background-color: transparent;
+    border-color: rgba(255,255,255, .4);
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 5px 19px;
+
+    &:hover,
+    &:focus{
+      background-color: $brand-info-dr;
+      color: $white;
+      border-color: $brand-info-dr;
+    }
+  }
+}
+
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-circle{
+  border-radius: 50px;
+}
+
+.btn-rounded{
+  border-radius: 4px;
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn{
+  &.btn-icon {
+    padding-left: 40px;
+    padding-right: 40px;
+    display: inline-flex;
+
+    .btn-text{
+      vertical-align: middle;
+    }
+
+    .icon {
+      font-size: 24px;
+      line-height: 24px;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    [class*='fa-']{
+      font-size: 16px;
+    }
+
+    &-left{
+      .icon{
+        padding-right: 12px;
+      }
+    }
+
+    &-right{
+      .icon{
+        padding-left: 12px;
+      }
+    }
+  }
+}
+
+.btn-naira {
+  overflow: hidden;
+  transition: background-color 0.3s, box-shadow 0.2s;
+
+  .icon{
+    font-size: 20px;
+
+    &.mdi{
+      font-size: 30px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    z-index: -1;
+    @include transform(translateY(-100%) rotate3d(0, 0, 1, -10deg));
+    background: rgba(255,255,255,.4);
+    transition: .3s;
+    opacity: 0;
+  }
+
+  &.btn-naira-up::before {
+    @include transform(translateY(100%) rotate3d(0, 0, 1, 10deg));
+  }
+  & > span {
+    display: block;
+  }
+  & > span,
+  .icon {
+    transition: 0.3s;
+    will-change: transform;
+  }
+  .icon {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    @include transform(translate(-50%, -200%));
+    pointer-events: none;
+  }
+  &.btn-naira-up .icon {
+    @include transform(translate(-50%, 300%));
+  }
+
+  &:hover {
+    .icon {
+      @include transform(translate(-50%, 50%));
+    }
+    > span:not(.icon) {
+      opacity: 0;
+      @include transform(translateY(200%));
+    }
+    &::before {
+      opacity: 1;
+      animation: anim-naira-1 0.3s forwards ease-in;
+    }
+  }
+
+  &.btn-naira-up:hover {
+    &::before {
+      animation: anim-naira-2 0.3s forwards ease-in;
+    }
+    & > span:not(.icon) {
+      @include transform(translateY(-200%));
+    }
+  }
+}
+.tablet{
+  .btn-naira {
+    &:hover{
+      background-color: #fff;
+    }
+  }
+}
+
+.lt-ie10 {
+  .btn-naira {
+    &:before {
+      display: none;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+html.mac-os{
+  .btn-naira {
+    &:before {
+      display: none;
+    }
+  }
+}
+
+@-webkit-keyframes anim-naira-1 {
+  50% {
+    @include transform(translateY(-50%) rotate3d(0, 0, 1, -10deg));
+    animation-timing-function: ease-out;
+  }
+  100% {
+    @include transform(translateY(0%) rotate3d(0, 0, 1, 0deg));
+  }
+}
+
+@keyframes anim-naira-1 {
+  50% {
+    @include transform(translateY(-50%) rotate3d(0, 0, 1, -10deg));
+    animation-timing-function: ease-out;
+  }
+  100% {
+    @include transform(translateY(0%) rotate3d(0, 0, 1, 0deg));
+  }
+}
+
+@-webkit-keyframes anim-naira-2 {
+  50% {
+    @include transform(translateY(50%) rotate3d(0, 0, 1, 10deg));
+    animation-timing-function: ease-out;
+  }
+  100% {
+    @include transform(translateY(0%) rotate3d(0, 0, 1, 0deg));
+  }
+}
+
+@keyframes anim-naira-2 {
+  50% {
+    @include transform(translateY(50%) rotate3d(0, 0, 1, 10deg));
+    animation-timing-function: ease-out;
+  }
+  100% {
+    @include transform(translateY(0%) rotate3d(0, 0, 1, 0deg));
+  }
+}

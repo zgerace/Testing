@@ -1,0 +1,189 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Grid
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Grid', 'Choose your style',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Grid"
+			}
+		}
+		)
+
+		section.section-80.section-md-110.section-grid-demonstration
+			.shell
+				h2.text-ubold Grid
+				hr.divider.divider-gray-dark.divider-80.divider-offset
+				div.offset-md-top-30.offset-top-20
+					p A responsive fluid grid system that appropriately scales up to 12 columns
+						br.veil.reveal-md-block
+						| with gorgeous full-width and boxed options.
+
+			.section-top-80.section-md-top-90
+				h4.text-bold Full-Width Grid System
+				.shell.shell-wide.text-md-left.offset-top-30
+					.row
+						.col-xs-12
+							.well
+								h4.text-bold 1/1
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site. Our blog and social media accounts are available to encourage communication and connection between clients and personnel and tell you more about us in the informal environments where we can have a dialogue instead of just a narrative like that.
+					.row.offset-top-30
+						.col-xs-6
+							.well
+								h4.text-bold 1/2
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your
+						.col-xs-6
+							.well
+								h4.text-bold 1/2
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your
+					.row.offset-top-30
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and
+					.row.offset-top-30
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great
+					.row.offset-top-30
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+
+			.section-top-80.section-md-top-120
+				h4.text-bold Boxed Grid System
+				.shell.text-md-left.offset-top-30
+					.row
+						.col-xs-12
+							.well
+								h4.text-bold 1/1
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly. Site navigation is extremely intuitive and user-friendly.
+					.row.offset-top-30
+						.col-xs-6
+							.well
+								h4.text-bold 1/2
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and
+						.col-xs-6
+							.well
+								h4.text-bold 1/2
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and
+					.row.offset-top-30
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login
+						.col-xs-4
+							.well
+								h4.text-bold 1/3
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login
+					.row.offset-top-30
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+						.col-xs-3
+							.well
+								h4.text-bold 1/4
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for.
+					.row.offset-top-30
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+						.col-xs-2
+							.well
+								h4.text-bold 1/6
+								p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and
+
+	// Page Footer
+	include ../sections/_footer-default

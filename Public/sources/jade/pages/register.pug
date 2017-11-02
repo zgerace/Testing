@@ -1,0 +1,59 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Login/Register
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Login/Register', 'Enter the World of Travel',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Login/Register"
+			}
+		}
+		)
+
+		section.section-80.section-md-120
+			.shell
+				ul.nav-custom
+					li
+						a(href='login.html') Login
+					li
+						a.active(href='register.html') Register
+				.range.range-xs-center
+					.cell-sm-8.cell-md-6.cell-lg-4
+						// RD Mailform
+						form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-group
+								label.form-label.form-label-outside(for="login") Username
+								input#login.form-control.form-control-gray(type="text" name="login" data-constraints="@Required")
+							.form-group
+								label.form-label.form-label-outside(for="email") E-mail
+								input#email.form-control.form-control-gray(type="text" name="email" data-constraints="@Required @Email")
+							.form-group
+								label.form-label.form-label-outside(for="password") Password
+								input#password.form-control.form-control-gray(type="password" name="password" data-constraints="@Required")
+							.form-group
+								label.form-label.form-label-outside(for="password2") Confirm Password
+								input#password2.form-control.form-control-gray(type="password" name="password2" data-constraints="@Required")
+							button(type="submit").btn.btn-primary.btn-block.btn-sm.offset-top-22 Register
+
+	// Page Footer
+	include ../sections/_footer-default

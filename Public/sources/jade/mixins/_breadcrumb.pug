@@ -1,0 +1,20 @@
+//- Breadcrumbs
+
+//- imgPath - path to image
+//- pageTitle - Page title
+//- breadcrumbs - obj of breadcrumbs items
+
+mixin breadcrumbs(imgPath, pageTitle, pageSubTitle, breadcrumbs)
+	section(style='background-image: url('+imgPath+'); background-size: cover;')
+		.breadcrumb-wrapper
+			.shell.context-dark.section-30.section-lg-top-120
+				h5!=pageSubTitle
+				h1.offset-top-20.text-ubold!=pageTitle
+				ol.breadcrumb
+					each link, index in breadcrumbs
+						if (breadcrumbs[parseInt(index) + 1] )
+							li
+								a(href=link.href)= link.title
+						else
+							li
+								= link.title

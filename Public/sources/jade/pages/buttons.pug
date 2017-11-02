@@ -1,0 +1,98 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Buttons
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Buttons', 'Choose your style',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Buttons"
+			}
+		}
+		)
+		section.section-80.section-md-120
+			.shell
+				h2.text-ubold Buttons
+				hr.divider.divider-gray-dark.divider-80.divider-offset
+				div.offset-md-top-30.offset-top-20
+					p Easily insert buttons and call-to-actions in any page,
+						br.veil.reveal-md-block
+						| use amazing custom options to spice up your pages.
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize Button sizes
+					div.offset-md-top-30.offset-top-20
+						p 3 different sizes: default, middle, and small.
+					ul.group.offset-top-20.offset-md-top-30
+						li
+							a(href='#').btn.btn-primary default
+						li
+							a(href='#').btn.btn-primary.btn-sm middle
+						li
+							a(href='#').btn.btn-primary.btn-xs small
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize Button shapes
+					div.offset-md-top-30.offset-top-20
+						p 3 different shapes: default, round, and circle.
+					ul.group.offset-top-20.offset-md-top-30
+						li
+							a(href='#').btn.btn-primary default
+						li
+							a(href='#').btn.btn-primary.btn-rounded round
+						li
+							a(href='#').btn.btn-primary.btn-circle circle
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize buttons with icons
+					div.offset-md-top-30.offset-top-20
+						p Buttons are fully integrated with 900+ icons.
+					ul.group.offset-top-20.offset-md-top-30
+						li
+							a(href='#').btn.btn-primary.btn-icon.btn-icon-right
+								span icon right
+								span.icon.mdi.mdi-cart
+						li
+							a(href='#').btn.btn-primary.btn-icon.btn-icon-left
+								span.icon.mdi.mdi-clipboard-account
+								span icon left
+						li
+							a(href='#').btn.btn-default.btn-icon.btn-icon-right
+								span icon right
+								span.icon.mdi.mdi-cart
+						li
+							a(href='#').btn.btn-default.btn-icon.btn-icon-left
+								span.icon.mdi.mdi-clipboard-account
+								span icon left
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize Buttons without Shadow
+					div.offset-md-top-30.offset-top-20
+						p Buttons can also be displayed without a shadow effect.
+					ul.group.offset-top-20.offset-md-top-30
+						li
+							a(href='#').btn.btn-primary.btn-no-shadow no shadow
+						li
+							a(href='#').btn.btn-default.btn-no-shadow no shadow
+
+	// Page Footer
+	include ../sections/_footer-default

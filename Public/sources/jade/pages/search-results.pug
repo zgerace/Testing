@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 0
+
+block title
+	title Search results
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Search results', 'Here Is What We Found',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Search results"
+			}
+		}
+		)
+
+		section.section-80.section-120
+			.shell.shell-wide.text-left
+				.range.range-xs-center
+					.cell-lg-6.cell-md-8.cell-sm-10
+						// RD Search
+						form.offset-top-30.form-inline.rd-search(action="search-results.html", method="GET")
+							.form-group
+								label(for="rd-search-form-input" class="form-label") Search
+								input(class="form-control" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+							button(style='min-width: 160px;' type="submit").btn.btn-primary.btn-sm.btn-naira.btn-naira-up
+								span.icon.fa-search
+								span Search
+
+						.offset-top-60.rd-search-results
+
+	// Page Footer
+	include ../sections/_footer-default

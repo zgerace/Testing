@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 3
+
+block title
+	title Modern Blog
+
+block page
+	include ../mixins/_breadcrumb
+	include ../mixins/_pagination
+	include ../mixins/_posts
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Modern Blog', 'Our Latest News',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Blog",
+				"href": "#"
+			},
+			2: {
+				"title": "Modern Blog"
+			}
+		}
+		)
+
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide.text-md-left
+				.range.range-xs-center
+					.cell-md-push-1.cell-md-7.cell-lg-8.cell-xl-7.cell-xl-preffix-1
+						+post-modern('9 Ways to Become a Successful Travel Blogger', 'Article', '23 Comments', '684 Views', 'blog-single-post.html', 'Travel blogging is a crowded field — and it gets more crowded day by day. And a lot of the advice that people give are actually counterintuitive to your success. It takes a lot of hard work to be successful in this industry...', 'images/post-11.jpg', '680', '424', '09', 'September')
+
+						+post-modern('Visiting Paris on a Budget', 'Article', '23 Comments', '684 Views', 'blog-single-post.html', 'Paris is one of top-rated European cities – people  usually try to spend there as much time as possible, and you also may be lucky enough to spend an autumn house-sitting there. But even if you have somewhere...', 'images/post-12.jpg', '680', '424', '09', 'September')
+
+						+post-modern('How to Make Travel Videos', 'Article', '23 Comments', '684 Views', 'blog-single-post.html', 'Introducing our new Travel Video Course, taught by experts Sharon Carpenter and Beverly Bennett! They have over 31,000,000 YouTube views, have worked with big brands, tourism boards, and production...', 'images/post-13.jpg', '680', '424', '09', 'September')
+
+					.cell-md-5.cell-lg-4.cell-xl-3
+						include ../sections/_sidebar-md
+
+	// Page Footer
+	include ../sections/_footer-default

@@ -1,0 +1,43 @@
+// Progress bars
+// --------------------------------------------------
+
+.progress{
+  width: 100%;
+  height: 10px;
+  box-shadow: none;
+  background: #f3f4f7;
+
+  &-wrapper{
+    position: relative;
+    text-align: left;
+
+    & + &{
+      margin-top: 15px;
+
+      @media (min-width: $screen-md-min) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &-title{
+    float: left;
+    margin-bottom: 11px;
+    padding-right: 32px;
+  }
+
+  &-counter{
+    margin-bottom: 11px;
+    float: right;
+    color: $gray-base;
+  }
+
+  &-bar{
+    box-shadow: none;
+    background: linear-gradient(90deg, #c62a82 0%, #ad146a 100%);
+
+    &.progress-bar-info{
+      background: linear-gradient(90deg, #00bdb1 0%, #00b2a9 100%);
+    }
+  }
+}

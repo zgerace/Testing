@@ -1,0 +1,133 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 2
+
+block title
+  title Overview
+
+block page
+  include ../mixins/_breadcrumb
+  include ../mixins/_quotes
+
+  // Page Header
+  include ../sections/_header-default
+
+  // Page Content
+  main.page-content
+    +breadcrumbs('images/breadcrumbs-04.jpg', 'Overview', 'About Us',
+      {
+        0: {
+          "title": "Home",
+          "href": "./"
+        },
+        1: {
+          "title": "About",
+          "href": "#"
+        },
+        2: {
+          "title": "Overview"
+        }
+      }
+    )
+
+    section.section-80.section-md-120
+      .shell.shell-wide.text-lg-left
+        .range
+          .cell-lg-preffix-1.cell-lg-6.cell-lg-push-1
+            div
+              .img-wrap
+                figure
+                  span(data-toggle="modal" data-target="#myModal").icon.mdi.mdi-play-circle-outline
+                  img(src='images/overview-01.jpg' width='800' height='450' alt='').img-responsive.center-block
+          .cell-lg-5
+            .inset-lg-left-80
+              h5.text-info-dr Our History
+              h2.offset-top-20.text-ubold A Few Words About Us
+
+              hr.divider.divider-lg-left.divider-gray-dark.divider-80
+
+              p.offset-top-40.big.text-base Cruise Travel is the world’s first inspirational travel search service that focuses on what’s really important: your Interests and your Budget!
+              p How practical is an amazing weekend break for skiing if what you really look forward is relaxing on a sandy beach? How good a great destination can be, if it’s too expensive to get there? Cruise Travel offers an innovative and useful online experience, so you can find your perfect destination in just a couple of clicks!
+
+              a(href='testimonials.html').offset-top-20.offset-md-top-30.btn.btn-primary view testimonials
+
+    section.section-80.section-lg-120.bg-image-01.context-dark
+      .shell.shell-wide
+        .range
+          .cell-md-7.cell-xl-5.cell-md-preffix-4.cell-xl-preffix-5
+            blockquote.quote
+              p
+                q Cruise Travel was designed to help people discover new places, get to know new people, and just to enjoy traveling. Our booking system helps modern travelers easily book new tickets without any unnecessary queues and waiting. You just need to make a couple of clicks and you’re ready to go!
+              p
+                cite.text-gray John Smith, founder
+
+    section.section-80.section-md-120
+      .shell.shell-wide
+        h5.text-info-dr Why People Choose Us
+        h2.offset-top-20.text-ubold Our Advantages
+
+        hr.divider.divider-gray-dark.divider-80
+
+        .range.offset-md-top-90.offset-top-50
+          .cell-md-3.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-briefcase
+              span.icon-inner
+            h5.text-bold.offset-top-30 Royal Vacation 
+              br.veil.reveal-md-block
+              | Planners
+            hr.divider.divider-info.divider-50
+            p.inset-md-left-20.inset-md-right-20 We cooperate only with the most reliable cruise who can boast of the perfect reputation.
+          .cell-md-3.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-map-marker
+              span.icon-inner
+            h5.text-bold.offset-top-30 Detailed Cruise 
+              br.veil.reveal-md-block
+              | Itineraries
+            hr.divider.divider-info.divider-50
+            p.inset-md-left-20.inset-md-right-20 More than 7 million people use our services to find and book cruise tickets.
+          .cell-md-3.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-globe
+              span.icon-inner
+            h5.text-bold.offset-top-30 7 Continents, Infinite
+              br.veil.reveal-md-block
+              | Possibilities
+            hr.divider.divider-info.divider-50
+            p.inset-md-left-20.inset-md-right-20 Convenient and fast search for cruise tickets, hotels and cars.
+
+          .cell-md-3.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-commenting
+              span.icon-inner
+            h5.text-bold.offset-top-30 Personalized 
+              br.veil.reveal-md-block
+              | Services
+            hr.divider.divider-info.divider-50
+            p.inset-md-left-20.inset-md-right-20 We provide reliable ticket booking system, which is also perfect for first-time travellers.
+
+    section.section-80.section-md-120.bg-gray-lighter
+      .shell.shell-wide
+        h5.text-info-dr What People Say
+        h2.offset-top-20.text-ubold Testimonials
+
+        hr.divider.divider-gray-dark.divider-80
+
+        // Owl Carousel
+        .owl-dots-lg.text-left.offset-md-top-80.offset-top-50.owl-carousel(data-dots='true' data-items='1', data-sm-items='2', data-lg-items='3', data-margin='30', data-mouse-drag="false")
+          +quote-boxed('The ACE online floor care course is great for seasoned floor care technicians and rookies as well.  As someone who did have sone experience with floor care and VCT prior to taking the course I can come out with saying that I have expanded my knowledge and have furthered myself to becoming an expert in floor care.', 'Steven Butler', 'regular customer', 'images/user-01.jpg', '70', '70')
+
+          +quote-boxed("Excellent ports, accommodations, entertainment, service, and food. Your staff did everything possible to organize a comfortable cruise.", 'Jessica Diaz', 'regular customer', 'images/user-02.jpg', '70', '70')
+
+          +quote-boxed("After attending class I was surprised by the enthusiasm and knowledge. Let’s face it, how often do we find an instructor who is well rounded and is willing to share his hands on experience in the industry while providing you a training in a clear format that is easy to understand?", 'Crystal Moreno', 'regular customer', 'images/user-03.jpg', '70', '70')
+
+  // Page Footer
+  include ../sections/_footer-default
+  // Modal
+  #myModal.modal.fade(role='dialog')
+    .modal-dialog
+      // Modal content
+      .modal-content
+        .modal-header
+          button.close.mdi.mdi-window-close(type='button', data-dismiss='modal')
+        .modal-body
+          .embed-responsive.embed-responsive-16by9
+            iframe.embed-responsive-item.youtube-player(src='//www.youtube.com/embed/oYMCPeUOa7I' width="560" height="315" allowfullscreen)

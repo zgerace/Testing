@@ -1,0 +1,276 @@
+/*
+* Navbar components
+*/
+
+// RD Navbar
+.rd-navbar {
+  display: none;
+  box-shadow: $rd-navbar-shadow;
+}
+
+// RD Navbar Toggle
+.rd-navbar-toggle {
+  @include make-toggle(
+          $rd-navbar-toggle-preset,
+          $rd-navbar-min-line-height,
+          $rd-navbar-min-font-size,
+          $rd-navbar-fixed-toggle-color
+  );
+  background-color: transparent;
+  border: none;
+  &:focus{
+    outline: none;
+  }
+  display: none;
+}
+
+// RD Navbar Brand
+.rd-navbar-brand {
+  .brand-name {
+    color: $gray-dark;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+}
+
+// RD Navbar Dropdown
+.rd-navbar-dropdown {
+  display: none;
+}
+
+.rd-navbar {
+  // RD Navbar Search
+  .rd-search {
+    width: 350px;
+    &-toggle {
+      display: inline-block;
+      font: 400 18px/36px "FontAwesome";
+
+      &, &:before, &:after {
+        text-align: center;
+        width: 36px;
+        height: 36px;
+      }
+
+      &:before, &:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      &:before {
+        content: '\f002';
+        transition: .3s all ease;
+        @include transform(scale(1) rotate(0deg));
+      }
+
+      .rd-navbar:not(.rd-navbar-fixed) & {
+        &:after {
+          content: '\f00d';
+          transition: .3s all ease;
+          @include transform(scale(0) rotate(-90deg));
+        }
+
+        &.active {
+          &:before {
+            @include transform(scale(0) rotate(90deg));
+          }
+
+          &:after {
+            @include transform(scale(1) rotate(0deg));
+          }
+        }
+      }
+
+      .rd-navbar-fixed &, .rd-navbar-fixed &:before {
+        width: 48px;
+        line-height: 48px;
+      }
+    }
+
+    &-form-submit {
+      @include make-toggle(
+              $rd-navbar-search-toggle-preset,
+              $rd-navbar-min-line-height,
+              $rd-navbar-min-font-size,
+              $rd-navbar-panel-color
+      );
+    }
+  }
+}
+
+
+
+// Rd navbar shop
+
+.rd-navbar-shop{
+  display: inline-block;
+  font-size: 22px;
+  color: $white;
+  position: absolute;
+  right: 12px;
+  @include transform(translateY(-50%));
+  top: 50%;
+  z-index: 9;
+  transition: .3s;
+  &:hover{
+    color: $brand-primary;
+  }
+  &:focus{
+    outline: 0;
+    color: $brand-primary;
+  }
+}
+
+.rd-navbar-minimal{
+  
+  &.rd-navbar-fixed {
+    .rd-navbar-toggle,
+    .rd-navbar-collapse-toggle{
+      span {
+        &,
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+    .rd-navbar-panel:before {
+      background-color: $gray-darken;
+    }
+  }
+
+  &.rd-navbar-static{
+
+    .rd-navbar-inner{
+      max-width: 1800px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      background-color: transparent;
+    }
+
+    .rd-navbar-nav-wrap{
+      position: relative;
+    }
+
+    .rd-navbar-megamenu{
+      width: 950px;
+      left: calc(50% - 475px);
+
+      @media (min-width: 1400px) {
+        top: 100% !important;
+      }
+    }
+
+    .rd-navbar-nav{
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+
+      @media (min-width: $screen-lg-min) {
+        margin-right: 42px;
+      }
+
+      > li{
+        position: static;
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+
+        & + li {
+          margin-left: 10px;
+
+          @media (min-width: $screen-lg-min) {
+            margin-left: 25px;
+          }
+        }
+        
+        > a {
+          color: $white;
+        }
+        
+        > .rd-navbar-submenu-toggle{
+          color: $white;
+        }
+
+        &.active,
+        &.focus,
+        &.opened,
+        &:hover{
+          background-color: rgba($black,.3);
+
+          > .rd-navbar-submenu-toggle{
+            color: $brand-info;
+          }
+
+          > a{
+            color: $brand-info;
+            background-color: transparent;
+          }
+        }
+
+        &.rd-navbar-submenu{
+          padding-right: 13px;
+          > a{
+            padding-right: 0;
+          }
+        }
+        
+        > a{
+          &:before{
+            content: none;
+          }
+        }
+
+        > .rd-navbar-submenu-toggle {
+          position: static;
+          transform: none;
+          margin-left: 9px;
+        }
+      }
+    }
+
+    &.rd-navbar--is-stuck{
+      background-color: $gray-darken;
+      
+      .rd-navbar-inner{
+        padding-top: 9px; 
+        padding-bottom: 9px;
+      }
+
+      .rd-navbar-nav > li {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .rd-navbar-search.active{
+    .rd-search{
+      right: -18px;
+    }
+  }
+
+  .rd-navbar-search-toggle{
+    display: block;
+  }
+
+  // Contact info
+  .rd-navbar-contact-info{
+    text-align: right;
+
+    .icon{
+      padding-right: 10px;
+      font-size: 22px;
+    }
+
+    a{
+      color: #fff;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

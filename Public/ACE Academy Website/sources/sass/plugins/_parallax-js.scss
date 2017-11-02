@@ -1,0 +1,68 @@
+//
+// Parallax
+// --------------------------------------------------
+
+.parallax-scene {
+
+  &-wrapper{
+    position: relative;
+  }
+  
+  [class^='layer-'] {
+    position: relative;
+    pointer-events: none;
+  }
+
+  .layer{
+    &-01{
+      left: -130px;
+    }
+
+    &-02{
+      right: -80px;
+    }
+
+    &-03{
+      right: -40px;
+
+      @media (min-width: 1800px) {
+        right: -90px;
+        top: -10px;
+      }
+    }
+
+    &-04{
+      right: -60px;
+      @media (min-width: 1800px) {
+        right: -130px;
+      }
+      bottom: -210px;
+    }
+
+    &-05{
+      top: -50px;
+    }
+
+    &-06{
+      bottom: -50px;
+    }
+
+    &-07{
+      right: -80%;
+    }
+
+    &-08{
+      right: -50px;
+      top: -50px;
+    }
+
+    &-09{
+      top: 560px;
+      right: -300px;
+    }
+
+    &-10{
+      bottom: -320px;
+    }
+  }
+}

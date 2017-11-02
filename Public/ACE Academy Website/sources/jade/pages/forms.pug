@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Forms
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Forms', 'Choose your style',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Forms"
+			}
+		}
+		)
+		section.section-90.section-md-top-120
+			.shell
+				h2.text-ubold Forms
+				hr.divider.divider-gray-dark.divider-80.divider-offset
+				div.offset-md-top-30.offset-top-20
+					p With forms you can get almost any kind of information from
+						br.veil.reveal-md-block
+						| your visitors, who will definitely appreciate this attractive element.
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize login form
+					div.offset-md-top-60.offset-top-20
+						ul.group
+							li
+								a(href='#').btn.btn-steel.btn-icon.btn-icon-left.btn-sm
+									span.icon.fa-facebook
+									span.btn-text facebook
+							li
+								a(href='#').btn.btn-picton.btn-icon.btn-icon-left.btn-sm
+									span.icon.fa-twitter
+									span.btn-text twitter
+							li
+								a(href='#').btn.btn-danger.btn-icon.btn-icon-left.btn-sm
+									span.icon.fa-google
+									span.btn-text google
+					.range.range-xs-center.offset-top-60
+						.cell-md-6.cell-lg-4.cell-sm-8
+							// RD Mailform
+							form.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.form-group
+									label.form-label.form-label-outside(for="login") Username or e-mail
+									input#login.form-control.form-control-gray(type="text" name="login" data-constraints="@Required")
+								.form-group
+									label.form-label.form-label-outside(for="password") Password
+									input#password.form-control.form-control-gray(type="password" name="password" data-constraints="@Required")
+								button(type="submit").btn.btn-primary.btn-block.btn-sm.offset-top-22 sign in
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize contact us
+					div.offset-md-top-30.offset-top-20.range.range-xs-center
+						.cell-md-8
+							// RD Mailform
+							form.range.rd-mailform.text-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.cell-sm-6
+									.form-group
+										label.form-label.form-label-outside(for="contact-name") First name
+										input#contact-name.form-control.form-control-gray(type="text" name="name" data-constraints="@Required")
+								.cell-sm-6.offset-top-20.offset-sm-top-0
+									.form-group
+										label.form-label.form-label-outside(for="contact-surname") Last name
+										input#contact-surname.form-control.form-control-gray(type="text" name="surname" data-constraints="@Required")
+								.cell-sm-6.offset-top-20
+									.form-group
+										label.form-label.form-label-outside(for="contact-email") E-mail
+										input#contact-email.form-control.form-control-gray(type="email" name="email" data-constraints="@Required @Email")
+								.cell-sm-6.offset-top-20
+									.form-group
+										label.form-label.form-label-outside(for="contact-phone") Phone
+										input#contact-phone.form-control.form-control-gray(type="text" name="phone" data-constraints="@Required @Integer")
+								.cell-md-12.offset-top-20
+									.form-group
+										label.form-label.form-label-outside(for="contact-message") Message
+										textarea#contact-message.form-control.form-control-gray(name="message" data-constraints="@Required")
+									.offset-top-20.text-center.text-md-left
+										button(style='min-width: 140px;' type="submit").btn.btn-primary.btn-sm Send
+
+		section.section-80.section-md-90.bg-gray-lighter
+			.shell
+				h4.text-bold Newsletter
+				div.range.range-xs-center.offset-md-top-30.offset-top-20.text-md-left
+					.cell-md-6.cell-sm-8
+						p.text-base Sign up to our newsletter and be the first to know about latest company news, special offers, events, and discounts.
+						// RD Mailform
+						form.text-xs-left.offset-top-24.rd-mailform.form-inline(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+							.form-group
+								label.form-label.form-label-outside(for="subscribe-email") E-mail
+								input#subscribe-email.form-control(type="email" name="email" data-constraints="@Required @Email")
+							button(type="submit").btn.btn-primary.btn-sm subscribe
+
+	// Page Footer
+	include ../sections/_footer-default

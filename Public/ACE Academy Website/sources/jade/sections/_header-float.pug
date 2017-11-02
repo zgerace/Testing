@@ -1,0 +1,80 @@
+header.page-header.context-dark(style="background: no-repeat url('images/background-03.jpg') center; background-size: cover;")
+	// RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-float(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-device-layout='rd-navbar-static', data-lg-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static", data-sm-stick-up-offset="1px", data-md-stick-up-offset="1px", data-lg-stick-up-offset="60px")
+			.rd-navbar-collapse-toggle(data-rd-navbar-toggle='.rd-navbar-top-panel')
+				span
+			.rd-navbar-top-panel
+				.rd-navbar-top-panel-left
+					div.rd-navbar-top-panel-200
+						span.text-middle.icon.icon-sm.mdi.mdi-map-marker
+						a(href='#').text-middle 2130 Fulton Street, San Diego, CA 94117-1080 USA
+					div
+						span.text-middle.icon.icon-sm.mdi.mdi-phone
+						a(href='callto:#').text-middle 1-800-1234-567
+					div
+						span.text-middle.icon.icon-sm.mdi.mdi-email-open
+						a(href='mailto:#').text-middle info@demolink.org
+
+				.rd-navbar-top-panel-right
+					div
+						ul.list-inline
+							li
+								a(href='#').icon.fa-facebook
+							li
+								a(href='#').icon.fa-twitter
+							li
+								a(href='#').icon.fa-pinterest-p
+							li
+								a(href='#').icon.fa-vimeo
+							li
+								a(href='#').icon.fa-google-plus
+							li
+								a(href='#').icon.fa-rss
+
+			.rd-navbar-inner
+				// RD Navbar Panel
+				.rd-navbar-panel
+					// RD Navbar Toggle
+					button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+						span
+					// RD Navbar Brand
+					.rd-navbar-brand
+						a.reveal-inline-block.brand-name(href='index.html')
+							img(src='images/logo-dark.png' width='235' height='35' alt='').img-responsive.center-block
+
+				.rd-navbar-nav-wrap
+					include ../_navigation
+
+					//RD Navbar Search
+					div.rd-navbar-search
+						a.rd-navbar-search-toggle(data-rd-navbar-toggle=".rd-navbar-search" href="#")
+							span.fa-search
+						form(action="search-results.html" data-search-live="rd-search-results-live" method="GET").rd-search
+							div.form-group
+								label(for="rd-navbar-search-form-input" class="form-label") Search
+								input(class="rd-navbar-search-form-input form-control form-control-gray-lightest" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off")
+							button.btn.fa-search
+							#rd-search-results-live.rd-search-results-live
+	.shell.shell-wide.section-70.section-lg-bottom-140.parallax-scene-wrapper
+		.range.range-xs-center.parallax-scene-js.parallax-scene(data-scalar-x='5', data-scalar-y='5')
+
+			.cell-lg-2.veil.reveal-lg-block(style='position:relative;')
+				.layer-01
+					.layer(data-depth='0.6')
+						img(src='images/parallax-01.png' width='310' height='354' alt='')
+				.layer-02
+					.layer(data-depth='0.2')
+						img(src='images/parallax-02.png' width='173' height='198' alt='')
+
+			.cell-xl-6.cell-lg-8.cell-md-11.text-left(style="position:relative; z-index: 5;")
+				.responsive-tabs(data-type="horizontal").text-md-left.nav-custom-light.view-animate.fadeInUpSmall
+					include ../_search-form
+
+			.cell-lg-2.veil.reveal-lg-block(style='position:relative;')
+				.layer-03
+					.layer(data-depth='0.2')
+						img(src='images/parallax-03.png' width='173' height='198' alt='')
+				.layer-04
+					.layer(data-depth='0.85')
+						img( src='images/parallax-04.png' width='310' height='354' alt='')

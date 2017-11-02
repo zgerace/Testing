@@ -1,0 +1,119 @@
+//
+// Isotope
+// --------------------------------------------------
+
+$isotope-masonry-item-offset: 30px;
+
+
+.isotope{
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+[data-isotope-layout]{
+  position: relative;
+  @include transform(translateY(-$isotope-masonry-item-offset));
+  display: block;
+  margin-bottom: -$isotope-masonry-item-offset;
+  transition: .4s all ease;
+  min-height: 160px;
+
+  &:after{
+    content: '';
+    position: absolute;
+    margin-top: $isotope-masonry-item-offset / 2;
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    background-image: url("../images/isotope-loader.png");
+    background-position: -1152px 0;
+    animation: 0.7s sprite-animation steps(18) infinite;
+    transition: .4s all ease;
+    @include transform(translate(-50%, -50%));
+  }
+
+  [class*="col-"]{
+    display: block;
+    margin-top: $isotope-masonry-item-offset;
+    opacity: 0;
+    transition: .4s opacity ease;
+    /*
+     * @bugfix item position after filtering
+     * @affected iOS
+    */
+    //width: 100%;
+  }
+
+  &.isotope--loaded{
+    [class*="col-"]{
+      opacity: 1;
+    }
+
+    &:after{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.item-lg{
+  width: 100%;
+
+  @media (min-width: $screen-xs-min) {
+    width: calc(50% - 1px);
+  }
+  @media (min-width: 768px) {
+    width: 33.2%;
+  }
+
+  @media (min-width: 1500px) {
+    width: calc(40% - 1px);
+  }
+  overflow: hidden;
+}
+
+.item-sm,
+.grid-sizer{
+  width: 100%;
+
+  @media (min-width: $screen-xs-min) {
+    width: calc(50% - 1px);
+  }
+  @media (min-width: 768px) {
+    width: 33.2%;
+  }
+
+  @media (min-width: 1500px) {
+    width: calc(20% - 1px);
+  }
+  overflow: hidden;
+}
+
+
+.isotope-no-padding{
+  margin-bottom: 0;
+  transform: none;
+  
+  img{
+
+    width: auto;
+    min-width: 100.5%;
+    height: auto;
+    
+    @media (min-width: 1500px) {
+      max-width: none;
+    }
+  }
+  
+  [class*="col-"] {
+    margin-top: 0;
+  }
+}
+
+.isotope-col {
+  width: .5%;
+}

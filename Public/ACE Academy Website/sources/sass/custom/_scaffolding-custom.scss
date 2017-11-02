@@ -1,0 +1,760 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+
+// Page styles
+// --------------------------------------------------
+
+.page {
+  overflow: hidden;
+  background-color: $content-bg;
+}
+
+.page-wide{
+  > header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  > footer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    a{
+      color: #fff;
+    }
+  }
+}
+
+
+// Links
+
+a {
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &.hover,
+  &:hover{
+    color: $gray-dark;
+  }
+
+  &.focus,
+  &:focus{
+    color: $gray-light;
+  }
+}
+
+// Horizontal rules
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 1px solid $hr-border;
+}
+
+.hr-title{
+  margin-bottom: 20px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $gray-light;
+}
+
+// Main divider styles
+
+.divider{
+  height: 2px;
+  border: none;
+
+  &-wide{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 1px;
+    background-color: #e3e3e5;
+  }
+
+  //
+  // Divider color variations
+
+  &-info{
+    background-color: $brand-info;
+  }
+
+  &-info-dr{
+    background-color: $brand-info-dr;
+  }
+
+  &-primary{
+    background-color: $brand-primary;
+  }
+  
+  &-gray-dark {
+    background-color: $gray-dark;
+  }
+
+  &-white{
+    background-color: #fff;
+  }
+
+  //
+  // Divider sizes
+
+  &-80{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 80px;
+  }
+
+  &-60{
+    margin-top: 20px;
+    margin-bottom: 22px;
+    width: 60px;
+  }
+
+  &-50{
+    margin-top: 20px;
+    margin-bottom: 22px;
+    width: 50px;
+  }
+
+  &-40{
+    margin-top: 22px;
+    margin-bottom: 20px;
+    width: 40px;
+  }
+
+  &-30{
+    margin-top: 24px;
+    margin-bottom: 22px;
+    width: 30px;
+  }
+
+  //
+  // Divider spacing
+
+  &.divider-offset{
+
+  }
+
+  //
+  // Divider positioning
+
+  &-left{
+    margin-left: 0;
+    text-align: left;
+  }
+
+  &-lg-left{
+    @media (min-width: $screen-lg-min) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  &-md-left{
+    @media (min-width: $screen-md-min) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  &-sm-left{
+    @media (min-width: $screen-sm-min) {
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+}
+
+
+// Well
+
+.well{
+  background-color: #f3f4f7;
+  border: none;
+  box-shadow: none;
+  padding: 20px 4px;
+
+  h4{
+    @media (max-width: $screen-sm-min - 1) {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding: 31px 30px;
+  }
+}
+
+// Posts
+
+.post-blog{
+  & + &{
+    margin-top: 50px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 90px;
+    }
+  }
+
+  &-img{
+    a{
+      transition: .4s ease-in-out;
+      display: inline-block;
+
+      &:hover{
+        transform: scale(1.03);
+        box-shadow: 2px 2px 31px -3px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+  &-link{
+    margin-top: 24px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $brand-info-dr;
+
+    &:after{
+      display: inline-block;
+      content: '\f14f';
+      font-family: "Material Design Icons";
+      font-size: 16px;
+      margin-left: 7px;
+      vertical-align: middle;
+    }
+
+    &:hover{
+      color: $brand-primary;
+    }
+  }
+
+  &-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 30px;
+    }
+  }
+
+  &-date{
+    .icon:before{
+      content: '\f1e6';
+    }
+  }
+
+  &-tag{
+    .icon:before{
+      content: '\f5e9';
+    }
+  }
+
+  &-comments{
+    .icon:before{
+      content: '\f27e';
+    }
+  }
+
+  &-views{
+    .icon:before{
+      content: '\f2fd';
+    }
+  }
+
+  &-meta{
+    margin-top: 16px;
+  }
+
+  &-tag,
+  &-comments,
+  &-date,
+  &-views{
+    .text{
+      font-weight: 700;
+      color: $gray-base;
+      vertical-align: middle;
+
+      &[href]:hover{
+        color: $brand-primary;
+      }
+    }
+
+    .icon{
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+      font-family: "Material Design Icons";
+      font-size: 20px;
+      color: $brand-info-dr;
+    }
+  }
+
+  &-reply{
+    &:before{
+      content: '\f112';
+      font-family: FontAwesome;
+      font-size: 18px;
+      display: inline-block;
+      margin-right: 9px;
+      font-style: normal;
+    }
+  }
+}
+
+
+// Grid and masonry style
+
+.post{
+  .caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 84px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: $brand-info-dr;
+    color: #fff;
+    transition: .3s;
+    font-weight: 700;
+    border-top-left-radius: 9px;
+  }
+
+  &:hover{
+    .caption{
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.post-blog-masonry,
+.post-blog-grid{
+  position: relative;
+  border-radius: 9px;
+  background-color: #fff;
+  overflow: hidden;
+  text-align: left;
+
+  .post-blog-date{
+    font-size: 36px;
+    line-height: 1.1;
+    left: 900px;
+  }
+}
+
+
+// Post blog grid
+
+.post-blog-grid{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .post-blog-grid-body{
+    padding: 26px 30px 32px;
+  }
+
+  .post-blog-meta{
+    ul{
+      display: flex;
+    }
+
+    .post-blog-comments{
+      margin-left: auto;
+      margin-right: 20px;
+
+      @media (min-width: $screen-lg-min) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  .post-blog-grid-footer{
+    padding: 10px 16px;
+    background-color: $gray-darken;
+    margin-top: auto;
+
+    @media (min-width: $screen-lg-min) {
+      padding: 14px 30px;
+    }
+
+    .text{
+      color: #fff;
+    }
+  }
+
+  .post-blog-grid-title{
+    margin-bottom: 20px;
+  }
+}
+
+
+// Post blog masonry
+
+.post-blog-masonry{
+
+  .post-blog-masonry-body{
+    padding: 15px 20px 25px;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 23px 30px 35px;
+    }
+  }
+
+  .post-blog-masonry-title{
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+
+// Post blog modern
+
+.post-blog-modern{
+  & + &{
+    margin-top: 50px;
+
+    @media (min-width: $screen-lg-min) {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    display: flex;
+  }
+
+  .unit{
+    display: inline-flex;
+  }
+
+  .btn{
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    padding: 11px 19px;
+  }
+
+  &-comments{
+    .icon:before{
+      content: '\f27e';
+    }
+  }
+
+  &-views {
+    @media (min-width: $screen-xs-min) {
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 1px solid #eaeaea;
+    }
+
+    .icon:before{
+      content: '\f2fd';
+    }
+  }
+
+  &-comments,
+  &-views{
+    line-height: 1.6;
+
+    @media (min-width: $screen-xs-min) {
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .text{
+      vertical-align: middle;
+    }
+
+    .icon{
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: middle;
+      font-family: "Material Design Icons";
+      font-size: 20px;
+      color: $gray-light;
+    }
+  }
+
+  .post-blog-modern-img{
+    min-width: 100%;
+  }
+
+  .post-author-img{
+    position: relative;
+    z-index: 1;
+
+    &:before{
+      position: absolute;
+      top: 60px;
+      left: 100%;
+      height: 1px;
+      width: 300px;
+      background-color: $gray-light;
+      z-index: -1;
+
+      @media (min-width: $screen-lg-min) {
+        content: '';
+      }
+    }
+  }
+
+  &-top{
+    flex: 30%;
+    margin-bottom: 14px;
+    text-align: center;
+
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 0;
+      padding: 0 6px;
+    }
+  }
+
+  &-title{
+    margin: 24px 0 17px 0;
+  }
+
+  &-body{
+    flex: 70%;
+    padding: 19px;
+    background-color: #fff;
+    border: 1px solid $gray-light;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+
+// Post type 1
+
+.post-blog-type-1{
+  padding: 19px;
+  border-radius: 4px;
+  border: 1px solid $gray-light;
+  background-color: #fff;
+
+  .post-meta{
+    display: flex;
+
+    p{
+      margin-bottom: 0;
+    }
+
+    p + p{
+      border-left: 1px solid #eaeaea;
+      margin-left: 19px;
+      padding-left: 19px;
+    }
+  }
+
+  .post-blog-tag,
+  .post-blog-comments,
+  .post-blog-date,
+  .post-blog-views{
+    .text{
+      font-weight: 400;
+      color: $gray;
+
+      &[href]:hover{
+        color: $brand-info-dr;
+      }
+    }
+
+    .icon{
+      color: $gray-light;
+      line-height: 1;
+    }
+  }
+
+
+  .post-blog-meta{
+    @media (min-width: $screen-xs-min) {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    @media (min-width: 1700px) {
+      justify-content: flex-start;
+      font-size: 16px;
+    }
+
+    > *{
+      @media (min-width: $screen-xs-min) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (min-width: 1700px) {
+        display: block;
+      }
+    }
+
+    > * + *{
+      @media (min-width: 1700px) {
+        padding-left: 19px;
+        margin-left: 19px;
+        border-left: 1px solid #eaeaea;
+      }
+    }
+  }
+
+  hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 1px;
+    border: none;
+    background-color: #eaeaea;
+  }
+
+  .btn{
+    margin-top: 12px;
+
+    & + hr{
+      margin-top: 31px;
+      margin-bottom: 18px;
+    }
+  }
+
+  .post-blog-title{
+    margin-top: 18px;
+    margin-bottom: 12px;
+    font-weight: 700;
+
+    a{
+      color: $gray-base;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+
+// Post type 2
+
+.post-blog-type-2{
+  position: relative;
+  background-color: #fff;
+  border-radius: 9px;
+
+  .label{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  img{
+    min-width: 100%;
+  }
+
+  .post-blog-caption{
+    padding: 20px 31px 32px;
+  }
+
+  .post-blog-title{
+    margin-top: 12px;
+    margin-bottom: 21px;
+
+    a{
+      color: $gray-base;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+
+// Post type 3
+
+.post-blog-type-3{
+  .post-blog-caption{
+    height: 100%;
+    padding: 23px 20px 120px;
+    background-color: rgba(0,0,0,.6);
+    text-align: left;
+
+    @media (min-width: $screen-sm-min) {
+      width: 50%;
+      padding: 43px 40px 120px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      width: 75%;
+    }
+
+    @media (min-width: 1500px) {
+      width: 48.5%;
+    }
+  }
+  
+  p{
+    color: #e4e4e4;
+  }
+
+  .post-blog-link{
+    margin-top: 12px;
+    color: $brand-info;
+    
+    &:hover{
+      color: $white;
+    }
+  }
+
+  .post-blog-title{
+    margin-top: 43px;
+
+    a{
+      color: $white;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+
+// Gallery
+
+.gallery{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
+
+  @media (min-width: $screen-md-min) {
+    justify-content: flex-start;
+  }
+
+  &-item{
+    display: flex;
+    padding: 5px;
+
+    width: 105px;
+
+    img{
+      width: 100%;
+    }
+  }
+}

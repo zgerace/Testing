@@ -1,0 +1,153 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Tables
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Tables', 'Choose your style',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Tables"
+			}
+		}
+		)
+		section.section-80.section-md-120
+			.shell
+				h2.text-ubold Tables Style
+				hr.divider.divider-gray-dark.divider-80
+				div.offset-md-top-30.offset-top-20
+					p Tables have always been perfect for displaying facts
+						br.veil.reveal-md-block
+						| and numbers. Now you canbenefit from using them on your website.
+
+				.range.range-xs-center.offset-top-50
+					.cell-md-8
+						.table-responsive
+							table.table.text-left
+								thead
+									tr
+										th.text-regular.text-left Column 1
+										th.text-regular.text-left Column 2
+										th.text-regular.text-left Column 3
+										th.text-regular.text-left Column 4
+								tbody
+									tr
+										td Item #1
+										td Description
+										td Subtotal
+										td $1.00
+									tr
+										td Item #2
+										td Description
+										td Discount
+										td $2.00
+									tr
+										td Item #3
+										td Description
+										td Shipping
+										td $3.00
+									tr
+										td Item #4
+										td Description
+										td Tax
+										td $4.00
+									tr.text-base
+										td All Items
+										td Description
+										td Your Total
+										td $10.00
+
+
+						.offset-top-40.offset-lg-top-90
+							.table-responsive
+								table.table.table-striped.text-left
+									thead
+										tr
+											th.text-left.success Column 1
+											th.text-left.success Column 2
+											th.text-left.success Column 3
+											th.text-left.success Column 4
+									tbody
+										tr
+											td Item #1
+											td Description
+											td Subtotal
+											td $1.00
+										tr
+											td Item #2
+											td Description
+											td Discount
+											td $2.00
+										tr
+											td Item #3
+											td Description
+											td Shipping
+											td $3.00
+										tr
+											td Item #4
+											td Description
+											td Tax
+											td $4.00
+										tr.text-base
+											td All Items
+											td Description
+											td Your Total
+											td $10.00
+
+
+						.offset-top-40.offset-lg-top-90
+							.table-responsive
+								table.table.table-bordered.text-left
+									thead
+										tr
+											th.text-left.text-bold Column 1
+											th.text-left.text-bold Column 2
+											th.text-left.text-bold Column 3
+											th.text-left.text-bold Column 4
+									tbody
+										tr
+											td Item #1
+											td Description
+											td Subtotal
+											td $1.00
+										tr
+											td Item #2
+											td Description
+											td Discount
+											td $2.00
+										tr
+											td Item #3
+											td Description
+											td Shipping
+											td $3.00
+										tr
+											td Item #4
+											td Description
+											td Tax
+											td $4.00
+										tr.text-base
+											td All Items
+											td Description
+											td Your Total
+											td $10.00
+
+	// Page Footer
+	include ../sections/_footer-default

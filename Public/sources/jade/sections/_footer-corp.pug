@@ -1,0 +1,91 @@
+.rd-google-map-wrapper
+	// RD Google Map
+
+	.rd-google-map-skew-wrapper
+		.rd-google-map(class="rd-google-map__model", data-zoom='13', data-x='-73.9874068', data-y='40.643180')
+			ul.map_locations
+				li(data-y='40.643180', data-x='-73.9624068')
+					p
+					| 9870 St Vincent Place, Glasgow, DC 45 Fr 45.
+	footer.page-footer.text-sm-left
+		.shell.shell-wide
+			.range.section-60.section-lg-top-120
+				.cell-sm-6.cell-lg-2
+					h5.text-bold About Us
+
+					p.offset-top-30 Cruise Travel makes booking cruises easy. With us, you can get a great price on your next vacation for multiple destinations and lengths, from Carribean Islands to Norway. Enjoy our exclusive cruise deals!
+
+				.cell-sm-6.cell-lg-3
+					.inset-xl-left-50
+						h5.text-bold Tags
+
+						.offset-top-30
+							ul.group.group-sm
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Travel
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Cruise
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Destinations
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Booking
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Planning
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Ships
+								li
+									a(href='#').btn.btn-tag.btn-tag-info.btn-no-shadow Family Cruises
+
+				.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+					.inset-xl-right-50
+						h5.text-bold Latest Blog Posts
+
+						// Owl Carousel
+						.offset-top-20.offset-md-top-30.owl-nav-variant-2.owl-carousel(data-nav='true' data-items='1', data-margin='30', data-mouse-drag="false")
+							.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.post-minimal
+								.unit-left
+									img(src='images/footer-02.jpg' width='100' height='10' alt='').img-responsive.center-block
+								.unit-body
+									.text-bold
+										a(href='blog-single-post.html') The Ultimate Packing List For Female Travelers
+									span.reveal-block.offset-top-6.small It can be daunting trying to figure out what to pack for a week, a month, or...
+
+							.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.post-minimal
+								.unit-left
+									img(src='images/footer-01.jpg' width='100' height='10' alt='').img-responsive.center-block
+								.unit-body
+									.text-bold
+										a(href='blog-single-post.html') How These 5 People Found The Path to Their Dream Trip
+									span.reveal-block.offset-top-6.small Last year, we announced a case study program, in which we would work with…
+
+				.cell-sm-6.cell-lg-2.offset-top-40.offset-lg-top-0(style='z-index: 99;')
+					h5.text-bold Contact Information
+
+					.text-left.offset-top-30
+						.unit.unit-horizontal.unit-spacing-15
+							.unit-left
+								span.text-white.icon.icon-sm.mdi.mdi-map-marker
+							.unit-body
+								a(href='#') 2130 Fulton Street, San Diego,
+									br.veil.reveal-lg-block
+									| CA 94117-1080 USA
+
+						.unit.unit-horizontal.unit-spacing-15.offset-top-10
+							.unit-left
+								span.text-white.icon.icon-sm.mdi.mdi-phone
+							.unit-body
+								a(href='callto:#') 1-800-1234-567
+
+
+		div.shell.shell-wide.page-footer-min
+			p
+				| &#169;
+				=' '
+				span(id="copyright-year")
+				=' '
+				| All Rights Reserved Terms of Use and
+				=' '
+				a(href="privacy.html") Privacy Policy
+				if(footerLink)
+					// {%FOOTER_LINK}
+						

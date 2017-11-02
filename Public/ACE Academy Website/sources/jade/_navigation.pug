@@ -1,0 +1,96 @@
+// RD Navbar Nav
+ul.rd-navbar-nav
+	li(class=(activeIndex == 1 ? 'active' : ''))
+		a(href='./') Home
+	li(class=(activeIndex == 2 ? 'active' : ''))
+		a(href='#') About
+		// RD Navbar Dropdown
+		ul.rd-navbar-dropdown
+			li
+				a(href='overview.html') Overview
+			li
+				a(href='testimonials.html') Testimonials
+			li
+				a(href='faq.html') FAQ
+	li(class=(activeIndex == 3 ? 'active' : ''))
+		a(href='#') Blog
+		// RD Navbar Dropdown
+		ul.rd-navbar-dropdown
+			li
+				a(href='blog-classic.html') Classic blog
+			li
+				a(href='blog-grid.html') Grid blog
+			li
+				a(href='blog-masonry.html') Masonry blog
+			li
+				a(href='blog-modern.html') Modern blog
+			li
+				a(href='blog-modern-2.html') Modern blog v.2
+			li
+				a(href='blog-single-post.html') Blog single post
+	li(class=(activeIndex == 4 ? 'active' : ''))
+		a(href='#') Pages
+		// RD Navbar Megamenu
+		ul.rd-navbar-megamenu
+			li
+				h5 Gallery
+				ul
+					li
+						a(href='gallery-cobbles.html') Cobbles gallery
+					li
+						a(href='gallery-grid.html') Grid gallery
+					li
+						a(href='gallery-gallery-full.html') Grid gallery fullwidth
+					li
+						a(href='gallery-masonry.html') Masonry gallery
+			li
+				h5 Extras
+				ul
+					li
+						a(href='404.html') 404
+					li
+						a(href='503.html') 503
+					li
+						a(href='maintenance.html') Maintenance
+					li
+						a(href='soon.html') Coming Soon
+					li
+						a(href='login.html') Login/Register
+					li
+						a(href='sitemap.html') Site Map
+					li
+						a(href='tickets.html') Tickets list
+			li
+				h5 Elements
+				ul
+					li
+						a(href='grid.html') Grid
+					li
+						a(href='tables.html') Tables
+					li
+						a(href='bars.html') Progress bars
+					li
+						a(href='tabs.html') Tabs & Accordions
+					li
+						a(href='forms.html') Forms
+					li
+						a(href='buttons.html') Buttons
+					li
+						a(href='typography.html') Typography
+			li
+				h5 Layouts
+				ul
+					li
+						a(href='header-default.html') Header default
+					li
+						a(href='header-minimal.html') Header minimal
+					li
+						a(href='header-wide.html') Header wide
+					li
+						a(href='footer-default.html') Footer default
+					li
+						a(href='footer-corp.html') Footer corporate
+					li
+						a(href='footer-widget.html') Footer widget
+	li(class=(activeIndex == 5 ? 'active' : ''))
+		a(href='contacts.html') Contacts

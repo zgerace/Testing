@@ -1,0 +1,77 @@
+//- Quote
+
+//- q - quote text
+//- cite - quote author
+
+mixin quote(q, cite)
+	// Quote
+	blockquote.quote
+		p
+			q=q
+		p
+			cite=cite
+
+
+//- Quote boxed style
+
+//- q - quote text
+//- author - quote author
+//- position - author position
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin quote-boxed(q, author, position, imgSrc, imgW, imgH)
+	// Quote boxed style
+	blockquote.quote-boxed
+		p
+			q=q
+		.unit.unit-horizontal.unit-middle.unit-spacing-xs
+			.unit-left
+				img(src=imgSrc width=imgW height=imgH alt='').img-circle.img-responsive.center-block
+			.unit-body
+				div.text-base.text-bold=author
+				div.text-gray.text-italic=position
+
+
+//- Quote modern style
+
+//- q - quote text
+//- author - quote author
+//- position - author position
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin quote-modern(q, author, position, imgSrc, imgW, imgH)
+	// Quote modern style
+	blockquote.quote-modern
+		.unit.unit-horizontal.unit-middle.unit-spacing-sm
+			.unit-left
+				img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+			.unit-body
+				.inset-right-10
+					h5.text-info.text-bold=author
+					span(style='opacity: .5;').offset-top-6.reveal-block.text-white.text-capitalize.text-italic=position
+		p.h4.text-italic
+			q=q
+
+
+//- Quote wide style
+
+//- q - quote text
+//- author - quote author
+//- position - author position
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin quote-wide(q, author, position, imgSrc, imgW, imgH)
+	// Quote wide style
+	blockquote.quote-wide
+		img(src=imgSrc width=imgW height=imgH alt='').img-circle.veil-sm
+		h4.text-italic.offset-top-20.offset-sm-top-0
+			q=q
+		hr.divider.divider-30.divider-info
+		.text-primary.text-bold=author
+		.text-italic.text-gray=position

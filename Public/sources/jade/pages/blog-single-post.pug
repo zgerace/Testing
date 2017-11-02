@@ -1,0 +1,148 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 3
+
+block title
+	title Blog Post
+
+block page
+	include ../mixins/_breadcrumb
+	include ../mixins/_posts
+	include ../mixins/_pagination
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Blog Post', 'Our Latest News',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Blog",
+				"href": "#"
+			},
+			2: {
+				"title": "Blog Post"
+			}
+		}
+		)
+
+		section.section-80.section-md-120
+			.shell.shell-wide.text-md-left
+				.range.range-xs-center
+					.cell-md-push-1.cell-md-7.cell-xl-7.cell-xl-preffix-1
+						h2.text-ubold Visiting Paris on a Budget
+
+						.post-blog-meta.offset-top-24
+							ul.group-lg
+								li.post-blog-tag
+									span.icon
+									span.text-base.text Article
+								li.post-blog-comments
+									span.icon
+									span.text-base.text 23
+								li.post-blog-views
+									span.icon
+									span.text-base.text 684
+
+						img(src='images/post-14.jpg' width='1020' height='580' alt='').img-responsive.center-block.offset-top-30.offset-md-top-50
+
+						p.offset-top-30 Paris is one of top-rated European cities – people  usually try to spend there as much time as possible, and you also may be lucky enough to spend an autumn house-sitting there. But even if you have somewhere to stay, Paris is an easy place to spend money – with fantastic restaurants, shops and wine bars on every corner, and the entrance fees to all those world-class museums and attractions which soon start to add up.
+						p So can you enjoy Paris if you’re trying not to spend too much? Here are some of the tips we picked up to help you keep your Paris travel costs down, and this time of year is one of the best times to try them out, with the low season between November and April having the lowest prices for travel and accommodation.
+						p Paris has so many world-famous buildings and monuments – like Sacre Cœur, the Arc de Triomphe and the Eiffel Tower – and going to look at them won’t cost a penny. You can also go and watch the artists at work in Montmartre, browse the book stalls on the banks of the Seine and look around Notre Dame Cathedral for free. And if the weather’s good, there are lots of parks and gardens around the city – like the Promenade Plantée on an old elevated railway line, the botanical gardens at the Jardin des Plantes, and even the atmospheric cemeteries, like Père-Lachaise and the Cimetière du Montparnasse.
+
+						img(src='images/post-15.jpg' width='1020' height='580' alt='').img-responsive.center-block.offset-top-30
+
+						p.offset-top-30 If you want to learn a bit more about Paris, our partners will be glad to offer free walking tours with local guides. They cover a range of different areas – from the Left Bank and the Marais to Notre Dame and Montmartre. Walks take about 90 minutes and off-season groups are usually small. In November, the group of three, who ordered a ticket at Cruise Travel, ended up with our own private guide on one of their Marais tours, who showed them some great local restaurants and bars as well as telling unknown facts about the area’s history, all for the price of a tip.
+						p There are also plenty of free festivals and events going on in Paris throughout the year – including the fireworks and military parades for Bastille Day on 14 July, the Paris Plages riverside beaches in August, the Nuit Blanche all-night arts festival, the Fête des Vendanges harvest festival in Montmartre in October and the Christmas markets in December. Check out the Bonjour Paris and Tourism in Paris websites for the latest information about what’s going on where and when.
+
+						.offset-top-50.offset-lg-top-90
+							h5.text-bold.hr-title Posted by
+
+							.offset-top-30.text-sm-left.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.unit-spacing-sm
+								.unit-left
+									img(src='images/user-17.jpg' width='230' height='230' alt='').img-responsive.center-block.img-circle
+								.unit-body
+									h5.text-bold.text-info-dr Joseph Morrison
+									p.offset-top-4.text-italic.text-gray-light Traveler, Blogger
+									p.offset-top-20 I am a professional blogger interested in everything taking place in cyberspace. I am running this website and try my best to make it a better place to visit. I post only the articles that are related to the topic and thoroughly analyze all visitors’ comments to cater to their needs better.
+									ul.offset-top-30.list-inline#comments
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-facebook
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-twitter
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-pinterest-p
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-vimeo
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-google-plus
+										li
+											a(href='#').icon.icon-xxs.text-gray-light.fa-rss
+
+						.offset-top-50.offset-lg-top-90
+							h5.text-bold.hr-title Comments
+
+							.text-sm-left.offset-top-30.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal
+								.unit-left
+									img(src='images/user-16.jpg' width='120' height='120' alt='').img-responsive.center-block.img-circle
+								.unit-body
+									.group-26
+										div
+											h5.text-bold.text-info-dr Betty Wade
+										div
+											p.text-gray-light.text-italic June 21, 2016 at 8:12pm
+									p.offset-top-20 All I can say right now is a huge THANK YOU for this post!!! I am planning my first trip to Paris for four days at the beginning of July. I started working on the budgeting this week and my head is starting to spin already. These tips are really great and I will be keeping them all in mind when I head over there. My wallet and I can’t thank you enough.
+									a(href='#reply').text-primary.post-blog-reply Reply
+
+							.inset-lg-left-150.offset-top-30
+								.text-sm-left.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal
+									.unit-left
+										img(src='images/user-15.jpg' width='120' height='120' alt='').img-responsive.center-block.img-circle
+									.unit-body
+										.group-26
+											div
+												h5.text-bold.text-info-dr Joseph Morrison
+											div
+												p.text-gray-light.text-italic June 21, 2016 at 8:15pm
+											div
+												p.text-gray-light.text-italic.post-blog-reply Betty Wade
+										p.offset-top-20 That’s great, hope it comes in useful and that you have a fabulous time in Paris, it really is a fantastic city!
+										a(href='#reply').text-primary.post-blog-reply Reply
+
+							.offset-top-50.offset-lg-top-90#reply
+								h5.text-bold.hr-title Send a Comment
+								// RD Mailform
+								form.text-sm-left.offset-top-20.range.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+									.cell-sm-6
+										.form-group
+											label.form-label.form-label-outside(for="contact-name") First name
+											input#contact-name.form-control.form-control-gray(type="text" name="name" data-constraints="@Required")
+									.cell-sm-6.offset-top-20.offset-sm-top-0
+										.form-group
+											label.form-label.form-label-outside(for="contact-surname") Last name
+											input#contact-surname.form-control.form-control-gray(type="text" name="surname" data-constraints="@Required")
+									.cell-sm-6.offset-top-20
+										.form-group
+											label.form-label.form-label-outside(for="contact-email") E-mail
+											input#contact-email.form-control.form-control-gray(type="email" name="email" data-constraints="@Required @Email")
+									.cell-sm-6.offset-top-20
+										.form-group
+											label.form-label.form-label-outside(for="contact-phone") Phone
+											input#contact-phone.form-control.form-control-gray(type="text" name="phone" data-constraints="@Required @Integer")
+									.cell-md-12.offset-top-20
+										.form-group
+											label.form-label.form-label-outside(for="contact-message") Message
+											textarea#contact-message.form-control.form-control-gray(name="message" data-constraints="@Required")
+										.offset-top-20.text-center.text-md-left
+											button(style='min-width: 140px;' type="submit").btn.btn-primary.btn-sm Submit
+
+					.cell-md-5.cell-xl-4
+						include ../sections/_sidebar
+	// Page Footer
+	include ../sections/_footer-default

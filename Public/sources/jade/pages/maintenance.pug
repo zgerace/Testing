@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Maintenance
+
+block page
+
+	.bg-image-03.context-dark.page-wide
+		// Page Header
+		header
+			a.reveal-inline-block.brand-name(href='index.html')
+				img(src='images/logo-white.png' width='235' height='35' alt='').img-responsive.center-block
+
+		// Page Content
+		main.page-content.page-content-100
+			.page-content-inner
+				.shell
+					h3.text-ubold Our Website Is Under Construction
+
+					.range.range-xs-center
+						.cell-sm-10.cell-md-8.cell-lg-6
+							.progress-wrapper
+								.progress-counter.progress-counter-static.text-white 85%
+								.progress
+									.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='85', aria-valuemin='0', aria-valuemax='100', style='width: 85%;')
+
+					.group.offset-top-60.offset-lg-top-100
+						a(href='./').btn.btn-primary.btn-naira.btn-naira-up
+							.icon.mdi.mdi-arrow-left-bold
+							span back to home page
+						a(href='contacts.html').btn.btn-white.btn-naira.btn-naira-up
+							.icon.fa-envelope-o
+							span contact us
+
+		// Page Footer
+		footer(style='opacity: .5;')
+			.shell
+				p
+					| &#169;
+					=' '
+					span(id="copyright-year")
+					=' '
+					| All Rights Reserved Terms of Use and
+					=' '
+					a(href="privacy.html") Privacy Policy
+					block footerLink

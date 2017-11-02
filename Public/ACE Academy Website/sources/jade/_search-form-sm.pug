@@ -1,0 +1,239 @@
+// Responsive-tabs
+ul.nav-custom-tabs.resp-tabs-list
+	li.nav-item
+		span.icon.mdi.mdi-airplane
+		span Flights
+	li.nav-item
+		span.icon.mdi.mdi-hotel
+		span Hotels
+	li.nav-item
+		span.icon.mdi.mdi-car
+		span Car Hire
+.resp-tabs-container.nav-custom-tab.nav-custom-wide
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-12
+					.form-group.radio-inline-wrapper
+						label.radio-inline
+							input(name="input-group-radio", value="radio-1", type="radio", checked)
+							| Round Trip
+						label.radio-inline
+							input(name="input-group-radio", value="radio-2", type="radio")
+							| One Way
+						label.radio-inline
+							input(name="input-group-radio", value="radio-3", type="radio")
+							| Multi-city
+
+				.range.offset-top-24
+					.cell-sm-6
+						.form-group
+							label.form-group-label From
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option New Delhi (DEL)
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+						.form-group
+							label.checkbox-inline
+								input(name="input-group-radio", value="checkbox-1", type="checkbox")
+								| Add Nearby Airports
+
+					.cell-sm-6.offset-top-15.offset-sm-top-0
+						.form-group
+							label.form-group-label To
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option New York (JFK)
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+						.form-group
+							label.checkbox-inline
+								input(name="input-group-radio", value="checkbox-2", type="checkbox")
+								| Add Nearby Airports
+
+				.range.offset-top-15
+					.cell-sm-6
+						.form-group
+							label.form-group-label Departure
+							input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='departure')
+
+					.cell-sm-6.offset-top-15.offset-sm-top-0
+						.form-group
+							label.form-group-label Return
+							input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='return')
+
+				.range.offset-top-15
+					.cell-sm-6
+						.form-group
+							label.form-group-label Cabin Class
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option Economy
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+
+					.cell-sm-6.offset-top-15.offset-sm-top-0
+						.range
+							.cell-sm-6
+								.form-group
+									label.form-group-label Adults (16+)
+									input.form-control(type="number" data-zeros="true" value="2" min="1" max="20")
+							.cell-sm-6.offset-top-15.offset-sm-top-0
+								.form-group
+									label.form-group-label Cabin Class
+									input.form-control(type="number" data-zeros="true" value="0" min="1" max="20")
+				.range-xs-justify.range-xs-middle.range.offset-top-20.text-center.text-xs-left
+					.cell-xs-6
+						.form-group
+							label.checkbox-inline
+								input(name="input-group-radio", value="checkbox-2", type="checkbox")
+								| Direct Flights Only
+
+					.cell-lg-clear-flex.cell-xs-6.text-xs-right.offset-top-15.offset-xs-top-0
+						button.btn.btn-primary.btn-sm.btn-naira.btn-naira-up
+							span.icon.fa-search
+							span Search Flight
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-8
+					.form-group.radio-inline-wrapper
+						label.radio-inline
+							input(name="input-group-radio", value="radio-1", type="radio", checked)
+							| Work
+						label.radio-inline
+							input(name="input-group-radio", value="radio-2", type="radio")
+							| Vacation
+
+				.range.offset-top-15
+					.cell-xs
+						.form-group
+							label.form-group-label Destination
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option New York (JFK)
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+
+					.cell-xs.offset-top-15.offset-xs-top-0
+						.form-group
+							label.form-group-label Rooms
+							input.form-control(type="number" min='0' value="1")
+
+				.range.offset-top-15
+					.cell-xs
+						.form-group
+							label.form-group-label Arrival
+							input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='departure')
+
+					.cell-xs.offset-top-15.offset-xs-top-0
+						.form-group
+							label.form-group-label Leave
+							input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='return')
+
+				.range.offset-top-15
+					.cell-xs-6
+						.form-group
+							label.form-group-label Adults (16+)
+							input.form-control(type="number" min='0' value="2")
+					.cell-xs-6.offset-top-15.offset-xs-top-0
+						.form-group
+							label.form-group-label Children
+							input.form-control(type="number" min='0' value="0")
+
+				.range.offset-top-15
+					.cell-xs-6
+						.form-group
+							label.form-group-label Star rating
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option 5
+								option(value="2") 5
+								option(value="3") 4
+								option(value="4") 3
+								option(value="5") 2
+								option(value="6") 1
+					.cell-xs-bottom.cell-xs-6.offset-top-15.offset-xs-top-0
+						button.btn.btn-block.btn-primary.btn-sm.btn-naira.btn-naira-up(style='padding-left: 29px; padding-right: 29px;')
+							span.icon.fa-search
+							span Search Hotels
+
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-8
+					.form-group.radio-inline-wrapper
+						label.checkbox-inline
+							input(name="input-group-radio", value="checkbox-2", type="checkbox")
+							| Return car to different location
+
+				.cell-md-12.offset-top-15
+					.range
+						.cell-xs
+							.form-group
+								label.form-group-label Select car
+								//Select 2
+								select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+									option Group A (e.g.  Ford Fiesta 1.2)
+									option(value="2") Demo Item 1-1
+									option(value="3") Demo Item 1-2
+									option(value="4") Demo Item 1-2
+									option(value="5") Demo Item 2-1
+									option(value="6") Demo Item 2-2
+									option(value="7") Demo Item 2-3
+
+						.cell-xs.offset-top-15.offset-xs-top-0
+							.form-group
+								label.form-group-label AWD
+								input.form-control(type="text" data-constraints="@Required @Integer" placeholder='000-000-000')
+
+				.cell-md-12.offset-top-15
+					.range
+						.cell-xs-6
+							.form-group
+								label.form-group-label Car class
+								//Select 2
+								select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+									option Coupe
+									option(value="4") Demo Item 1-1
+									option(value="3") Demo Item 1-2
+									option(value="2") Demo Item 1-2
+									option(value="1") Demo Item 2-1
+						.cell-xs-6.offset-top-15.offset-sm-top-0
+							.form-group
+								label.form-group-label Passengers
+								input.form-control(type="number" min='0' value="2")
+
+				.cell-md-12.offset-top-15
+					.range
+						.cell-xs
+							.form-group
+								label.form-group-label Pick-up Date
+								input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='departure')
+
+						.cell-xs.offset-top-15.offset-xs-top-0
+							.form-group
+								label.form-group-label Drop-off Date
+								input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='return')
+
+				.cell-md-12.offset-top-15.text-center
+					button.btn.btn-primary.btn-sm.btn-naira.btn-naira-up
+						span.icon.fa-search
+						span Search Cars

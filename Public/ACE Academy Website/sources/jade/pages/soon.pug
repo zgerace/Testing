@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Coming soon
+
+block page
+
+	.bg-image-03.context-dark.page-wide
+		// Page Header
+		header
+			a.reveal-inline-block.brand-name(href='index.html')
+				img(src='images/logo-white.png' width='235' height='35' alt='').img-responsive.center-block
+
+		// Page Content
+		main.page-content.page-content-100
+			.page-content-inner
+				.shell
+					h3.text-ubold We're Getting Ready to Launch In
+
+					// TimeCircles
+					.offset-top-40.DateCountdown-wrapper
+						.DateCountdown.DateCountdown-light(data-date='2017-05-01 00:00:00')
+
+					p.offset-top-50.big Our website is under construction, we are working very hard to give you the best
+						br.veil.reveal-lg-block
+						| experience on our new web site.
+					.group.offset-top-40
+						a(href='./').btn.btn-primary.btn-naira.btn-naira-up
+							.icon.mdi.mdi-arrow-left-bold
+							span back to home page
+						a(href='contacts.html').btn.btn-white.btn-naira.btn-naira-up
+							.icon.fa-envelope-o
+							span contact us
+
+		// Page Footer
+		footer(style='opacity: .5;')
+			.shell
+				p
+					| &#169;
+					=' '
+					span(id="copyright-year")
+					=' '
+					| All Rights Reserved Terms of Use and
+					=' '
+					a(href="privacy.html") Privacy Policy
+					block footerLink

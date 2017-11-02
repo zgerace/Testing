@@ -1,0 +1,151 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Grid without Padding Gallery
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Grid <span class="veil reveal-lg-inline"> without Padding </span> Gallery', 'Enjoy The Best Photos From Our Destinations',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Grid without Padding Gallery"
+			}
+		}
+		)
+
+		section.section-top-80.section-md-top-120
+			.row.isotope-wrap
+				// Isotope Filters
+				.col-lg-12
+					.isotope-filters.isotope-filters-horizontal
+						ul.nav-custom
+							li
+								a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All Offers
+							li
+								a(data-isotope-filter='Type 1', data-isotope-group='gallery', href='#') Europe
+							li
+								a(data-isotope-filter='Type 2', data-isotope-group='gallery', href='#') North America
+							li
+								a(data-isotope-filter='Type 3', data-isotope-group='gallery', href='#') Asia
+							li
+								a(data-isotope-filter='Type 4', data-isotope-group='gallery', href='#') Australia
+
+				// Isotope Content
+				.col-lg-12.offset-top-60
+					.isotope.isotope-no-padding(data-isotope-layout='fitRows', data-isotope-group='gallery')
+						.row.row-no-gutter.text-md-left
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='*')
+								.thumbnail
+									img(src='images/gallery-13.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 3')
+								.thumbnail
+									img(src='images/gallery-14.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 3')
+								.thumbnail
+									img(src='images/gallery-15.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 3')
+								.thumbnail
+									img(src='images/gallery-16.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 2')
+								.thumbnail
+									img(src='images/gallery-17.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 2')
+								.thumbnail
+									img(src='images/gallery-18.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 1')
+								.thumbnail
+									img(src='images/gallery-19.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 1')
+								.thumbnail
+									img(src='images/gallery-20.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 1')
+								.thumbnail
+									img(src='images/gallery-21.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 4')
+								.thumbnail
+									img(src='images/gallery-22.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 4')
+								.thumbnail
+									img(src='images/gallery-23.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+							.col-xs-12.col-sm-6.col-md-4.col-lg-3.isotope-item(data-filter='Type 4')
+								.thumbnail
+									img(src='images/gallery-24.jpg' width='480' height='310' alt='').img-responsive.center-block.thumbnail-image
+									a(href='tickets.html').caption
+										h4 London
+										hr.divider.divider-white.divider-md-left.divider-40
+										p When booking a ticket on our website, all you need to think of is the list of things you’ll pack in your suitcase, we will do everything else for you!
+
+	// Page Footer
+	include ../sections/_footer-default

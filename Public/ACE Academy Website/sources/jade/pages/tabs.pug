@@ -1,0 +1,138 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Tabs & Accordions
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'tabs & accordions', 'A Nice, Modern and Intuitive Interface',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Tabs & Accordions"
+			}
+		}
+		)
+		section.section-90.section-md-120
+			.shell
+				h2.text-ubold Tabs & Accordions
+				hr.divider.divider-gray-dark.divider-80.divider-offset
+				div.offset-md-top-40.offset-top-20
+					p With modern and intuitive interface of tabs and accordions, you can
+						br.veil.reveal-md-block
+						| control content to be organized within a single frame.
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize horizontal tabs
+					.offset-top-20.offset-md-top-60
+						.range.range-xs-center
+							.cell-md-8
+								// Responsive-tabs
+								.responsive-tabs(data-type="horizontal").responsive.responsive-tabs-classic.horizontal.text-left
+									ul.resp-tabs-list.tabs-1.text-center.tabs-group-default
+										li All Tabs
+										li Europe
+										li North America
+										li Asia
+
+									.resp-tabs-container.text-sm-left.tabs-group-default
+										div
+											p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+												br
+												br
+												| Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+										div
+											p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+												br
+												br
+												| Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+
+										div
+											p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+
+										div
+											p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+											
+
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize vertical tabs
+					div.offset-md-top-30.offset-top-20
+						.range.range-xs-center
+							.cell-md-8
+								// Responsive-tabs
+								.responsive-tabs(data-type="vertical").responsive.responsive-tabs-classic.vertical
+									ul.resp-tabs-list.tabs-1.text-center.tabs-group-default
+										li All Offers
+										li Europe
+										li North America
+										li Asia
+										li Australia
+									.resp-tabs-container.text-sm-left.tabs-group-default
+										div
+											p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+												br
+												br
+												| Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+										div
+											p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+												br
+												br
+												| Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+
+										div
+											p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+
+										div
+											p Site navigation is extremely intuitive and user-friendly. You will always know where you are now and will be able to skip from one page to another with a single mouse click. We use only trusted, verified content, so you can believe every word we are saying. We are always happy to greet the new visitors on our site.
+
+										div
+											p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers. Our site design and navigation has been thoroughly thought out. The layout is aesthetically appealing, contains concise texts in order not to take your precious time. Text styling allows scanning the pages quickly.
+
+
+				.section-top-80.section-md-top-90
+					h4.text-bold.text-capitalize Accordions
+					div.offset-md-top-30.offset-top-20
+						.range.range-xs-center
+							.cell-md-8.cell-lg-6
+								// Responsive-tabs
+								.offset-top-50.offset-lg-top-90.responsive-tabs(data-type="accordion").responsive.responsive-tabs-classic
+									ul.resp-tabs-list.tabs-1.text-center.tabs-group-default
+										li How can I change something in my order?
+										li How can I pay for my order?
+										li How long will my order take to be delivered?
+										li Can I return an item?
+										li Can I track my order?
+									.resp-tabs-container.text-sm-left.tabs-group-default
+										div
+											p If you need to change something in your order, please contact us immediately. We usually process orders within 30 minutes, and once we have processed your order, we will be unable to make any changes. 
+										div
+											p We accept Visa, MasterCard, and American Express credit and debit cards for your convenience.
+										div
+											p Delivery times will depend on your location. Once payment is confirmed your order will be packaged. Delivery can be expected within a day. 
+										div
+											p Please contact our administrators for more information on returning products purchased on our website.
+										div
+											p Yes, you can! After placing your order you will receive an order confirmation via email. Each order starts production 15 minutes after your order is placed. Within a few hours of you placing your order, you will receive an expected delivery time. When the order will be ready for delivery, you will receive another email with the tracking number and a link to trace the order online with the courier.
+
+
+	// Page Footer
+	include ../sections/_footer-default

@@ -1,0 +1,136 @@
+/*
+* @subsection   RD Google Map
+*
+* @description  Describes style declarations for RD Google Map extension
+*
+* @author       Evgeniy Gusarov
+* @link         https://ua.linkedin.com/pub/evgeniy-gusarov/8a/a40/54a
+* @version      1.0.0
+*/
+$map-height: 200px;
+$map-xs-height: 250px;
+$map-sm-height: 550px;
+
+.rd-google-map__model {
+  color: #333;
+  height: $map-xs-height;
+
+  img {
+    max-width: none !important;
+  }
+
+  @media (min-width: $screen-xs-min) {
+    height: $map-xs-height;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    height: $map-sm-height;
+  }
+}
+
+.map_locations {
+  display: none;
+}
+
+
+.rd-google-map-abs{
+  position: relative;
+
+  .rd-google-map__model {
+    height: 300px;
+    position: relative;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-lg-min) {
+      position: absolute !important;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      width: 26vw;
+      height: 100%;
+    }
+  }
+}
+
+
+
+@media (min-width: $screen-lg-min) {
+  
+  .rd-google-map-skew-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .rd-google-map-wrapper {
+    position: relative;
+
+    footer {
+      background-color: transparent;
+      position: relative;
+      pointer-events: none;
+
+      > * {
+        position: relative;
+      }
+
+      [class^='cell-'] {
+        pointer-events: auto;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 80px;
+        left: -50%;
+        background-color: #0a476a;
+        content: "";
+        z-index: 0;
+        transform: skewX(-61deg);
+        pointer-events: auto;
+        @media (min-width: 1500px) {
+          transform: skewX(-64deg);
+          right: 190px;
+        }
+      }
+    }
+  }
+}
+
+.rd-google-map-skew{
+  .rd-google-map__model{
+    height: 300px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 760px;
+    height: 365px;
+    transform: rotate(-30deg);
+    transform-origin: top right;
+    overflow: hidden;
+    //pointer-events: none;
+
+    > div:first-child{
+      > div:first-child {
+        > div:first-child {
+          > div:first-child {
+            //pointer-events: all;
+          }
+        }
+      }
+    }
+
+    .rd-google-map__model{
+      height: $map-sm-height;
+      transform: rotate(30deg);
+      transform-origin: top right;
+    }
+  }
+}

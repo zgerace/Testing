@@ -1,0 +1,107 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 2
+
+block title
+	title Testimonials
+
+block page
+	include ../mixins/_breadcrumb
+	include ../mixins/_quotes
+
+	// Page Header
+	include ../sections/_header-default
+
+		
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-02.jpg', 'Testimonials', 'What People Say',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "About",
+				"href": "#"
+			},
+			2: {
+				"title": "Testimonials"
+			}
+		}
+		)
+
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide
+				h2.text-ubold 3 Columns Layout
+
+				hr.divider.divider-gray-dark.divider-80
+
+				// Owl Carousel
+				.owl-dots-lg.text-left.offset-md-top-80.offset-top-50.owl-carousel(data-dots='true' data-items='1', data-sm-items='2', data-lg-items='3', data-margin='30', data-mouse-drag="false")
+					+quote-boxed('The ACE online floor care course is great for seasoned floor care technicians and rookies as well.  As someone who did have sone experience with floor care and VCT prior to taking the course I can come out with saying that I have expanded my knowledge and have furthered myself to becoming an expert in floor care.', 'Steven Butler', 'regular customer', 'images/user-01.jpg', '70', '70')
+
+					+quote-boxed("Excellent ports, accommodations, entertainment, service, and food. Your staff did everything possible to organize a comfortable cruise.", 'Jessica Diaz', 'regular customer', 'images/user-02.jpg', '70', '70')
+
+					+quote-boxed("After attending class I was surprised by the enthusiasm and knowledge. Let’s face it, how often do we find an instructor who is well rounded and is willing to share his hands on experience in the industry while providing you a training in a clear format that is easy to understand?", 'Crystal Moreno', 'regular customer', 'images/user-03.jpg', '70', '70')
+
+		section.section-80.section-md-120
+			.shell
+				h2.text-ubold Carousel Testimonials
+
+				hr.divider.divider-gray-dark.divider-80
+
+				.offset-top-40.offset-md-top-90
+					ul.list-inline.owl-custom-pagination.veil.reveal-sm-block
+						li(data-owl-item="0" class="owl-dot-custom")
+							img(src='images/user-03.jpg' width='100' height='100' alt='').img-circle
+						li(data-owl-item="1" class="owl-dot-custom")
+							img(src='images/user-11.jpg' width='100' height='100' alt='').img-circle
+						li(data-owl-item="2" class="owl-dot-custom")
+							img(src='images/user-12.jpg' width='100' height='100' alt='').img-circle
+						li(data-owl-item="3" class="owl-dot-custom")
+							img(src='images/user-01.jpg' width='100' height='100' alt='').img-circle
+						li(data-owl-item="4" class="owl-dot-custom")
+							img(src='images/user-02.jpg' width='100' height='100' alt='').img-circle
+					// Owl Carousel
+					.offset-sm-top-30.owl-dots-sm.owl-carousel(data-active="2" data-dots='true' data-nav='true' data-dots-custom=".owl-custom-pagination" data-items='1', data-loop='false', data-margin='30', data-mouse-drag="false")
+
+						.range.range-xs-center
+							.cell-md-8
+								+quote-wide("After attending class I was surprised by the enthusiasm and knowledge. Let’s face it, how often do we find an instructor who is well rounded and is willing to share his hands on experience in the industry while providing you a training in a clear format that is easy to understand?", "Crystal Moreno", "regular customer", "images/user-10.jpg", "100", "100")
+
+						.range.range-xs-center
+							.cell-md-8
+								+quote-wide("I just want to thank you for your help. I was so pleased and grateful. Keep up the excellent work. Your site provides the best support.", "Joshua Burstein", "regular customer", "images/user-11.jpg", "100", "100")
+
+						.range.range-xs-center
+							.cell-md-8
+								+quote-wide("Excellent ports, accommodations, entertainment, service, and food. Your staff did everything possible to organize a comfortable cruise.", "Jessica Diaz", "regular customer", "images/user-12.jpg", "100", "100")
+
+						.range.range-xs-center
+							.cell-md-8
+								+quote-wide("The ACE online floor care course is great for seasoned floor care technicians and rookies as well.  As someone who did have sone experience with floor care and VCT prior to taking the course I can come out with saying that I have expanded my knowledge and have furthered myself to becoming an expert in floor care.", "Steven Butler", "regular customer", "images/user-13.jpg", "100", "100")
+
+						.range.range-xs-center
+							.cell-md-8
+								+quote-wide("Excellent ports, accommodations, entertainment, service, and food. Your staff did everything possible to organize a comfortable cruise.", "Jessica Diaz", "regular customer", "images/user-14.jpg", "100", "100")
+
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide
+				h2.text-ubold 4 Columns Layout
+
+				hr.divider.divider-gray-dark.divider-80
+
+				// Owl Carousel
+				.owl-dots-lg.text-left.offset-md-top-90.offset-top-50.owl-carousel(data-animation-in='fadeIn' data-dots='true' data-items='1', data-sm-items='2', data-md-items='3', data-lg-items='4', data-margin='30', data-mouse-drag="false")
+					+quote-modern("I just want to thank you for your help. I was so pleased and grateful. Keep up the excellent work. Your site provides the best support.", 'Joshua Burstein', 'regular customer', 'images/user-04.jpg', '100', '100')
+
+					+quote-modern("Excellent ports, accommodations, entertainment, service, and food. Your staff did everything possible to organize a comfortable cruise.", 'Jessica Diaz', 'regular customer', 'images/user-05.jpg', '100', '100')
+
+					+quote-modern("The ACE online floor care course is great for seasoned floor care technicians and rookies as well.  As someone who did have sone experience with floor care and VCT prior to taking the course I can come out with saying that I have expanded my knowledge and have furthered myself to becoming an expert in floor care.", 'Steven Butler', 'regular customer', 'images/user-06.jpg', '100', '100')
+
+					+quote-modern("After attending class I was surprised by the enthusiasm and knowledge. Let’s face it, how often do we find an instructor who is well rounded and is willing to share his hands on experience in the industry while providing you a training in a clear format that is easy to understand?", 'Crystal Moreno', 'regular customer', 'images/user-07.jpg', '100', '100')
+
+	// Page Footer
+	include ../sections/_footer-default

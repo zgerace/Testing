@@ -1,0 +1,36 @@
+/*
+* Static Layout
+*/
+
+.rd-navbar-static {
+  display: block;
+
+  // RD Navbar brand
+  .rd-navbar-brand{
+
+  }
+
+  .rd-navbar-inner{
+    justify-content: space-between;
+  }
+
+  // RD Navbar nav wrap
+  .rd-navbar-nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .rd-navbar-nav{
+    margin-right: 32px;
+
+    > li {
+      display: inline-block;
+
+      & + li{
+        margin-left: $navbar-static-nav-indent;
+      }
+    }
+  }
+}
+

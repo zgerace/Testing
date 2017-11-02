@@ -1,0 +1,112 @@
+footer.page-footer-widget
+	.shell.shell-wide.text-sm-left
+		.range.section-60.section-md-90
+			.cell-sm-6.cell-lg-3
+				h5.text-bold Contact Us
+				hr.divider.divider-50.divider-info-dr.divider-sm-left.offset-top-12
+
+				.offset-top-30.p
+					.unit.unit-horizontal.unit-spacing-15.text-left
+						.unit-left
+							span.text-primary-dr.icon.icon-sm.mdi.mdi-map-marker
+						.unit-body
+							a(href='#').text-gray 2130 Fulton Street, San Diego,
+								br.veil.reveal-lg-block
+								| CA 94117-1080 USA
+
+					.unit.unit-horizontal.unit-spacing-15.offset-top-10.text-left
+						.unit-left
+							span.text-primary-dr.icon.icon-sm.mdi.mdi-phone
+						.unit-body
+							a(href='callto:#').text-gray 1-800-1234-567
+
+
+					.unit.unit-horizontal.unit-spacing-15.offset-top-10.text-left
+						.unit-left
+							span.text-primary-dr.icon.icon-sm.mdi.mdi-email-open
+						.unit-body
+							a(href='mailto:#').text-gray info@demolink.org
+
+					ul.list-inline.offset-top-20
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-facebook
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-twitter
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-pinterest-p
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-vimeo
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-google-plus
+						li
+							a(href='#').icon.icon-sm.text-gray-light.fa-rss
+
+
+			.cell-sm-6.cell-lg-3
+				.inset-xl-right-65
+					h5.text-bold Newsletter
+					hr.divider.divider-50.divider-info-dr.divider-sm-left.offset-top-12
+
+					p.offset-top-30 Sign up to our newsletter and be the first to know about latest news, special offers, events, and discounts.
+					// RD Mailform
+					form.text-sm-left.offset-top-24.rd-mailform(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+						.form-group.form-group-sm
+							label.form-label(for="subscribe-email-footer") Enter your e-mail...
+							input#subscribe-email-footer.form-control(type="email" name="email" data-constraints="@Required @Email")
+						button(type="submit").btn.btn-primary.btn-xxs.btn-naira.btn-naira-up
+							span.icon.fa-envelope-o
+							span Subscribe
+
+			.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+				h5.text-bold Twitter Feed
+				hr.divider.divider-50.divider-info-dr.divider-sm-left.offset-top-12
+
+				.offset-top-20.offset-md-top-40
+					// RD Twitter Feed
+					.text-left.offset-top-26.twitter(data-twitter-username='templatemonster')
+						.twitter-item(data-twitter-type='tweet')
+							div(data-tweet='text')
+						.twitter-item(data-twitter-type='tweet')
+							div(data-tweet='text')
+
+
+			.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+				h5.text-bold Flickr Feed
+				hr.divider.divider-50.divider-info-dr.divider-sm-left.offset-top-12
+
+				// RD Flickr
+				.offset-top-30.gallery.flickr(data-flickr-tags='61270tm')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+					.gallery-item
+						a(data-link='href' href='' data-type='flickr-item').reveal-inline-block.thumbnail-img
+							img.img-responsive(data-image_q='src', data-title='alt', src='images/_blank.png', alt='')
+	div.shell.shell-wide.page-footer-min.text-md-left
+		p
+			| &#169;
+			=' '
+			span(id="copyright-year")
+			=' '
+			| All Rights Reserved. Terms of Use and
+			=' '
+			a(href="privacy.html") Privacy Policy
+			block footerLink

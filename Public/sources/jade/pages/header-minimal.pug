@@ -1,0 +1,54 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Header minimal
+
+block page
+	include ../mixins/_thumbnails
+	include ../mixins/_posts
+
+	// Page Header
+	include ../sections/_header-minimal
+
+	// Page Content
+	main.page-content
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide
+				h2.view-animate.fadeInUpBigger.delay-06.text-center.text-ubold Why People Choose Us
+
+				hr.view-animate.fadeInUpBigger.delay-06.divider.divider-80.divider-gray-dark
+
+				.offset-top-120.range
+					.cell-sm-6.cell-lg-3.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.1s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.mdi.mdi-airplane
+								span.icon-inner
+							h5.text-ubold The Most Reliable Airlines Only
+							p We cooperate only with the most reliable airlines who can boast the perfect reputation.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-sm-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.2s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.mdi.mdi-account-multiple(style='font-size: 54px;')
+								span.icon-inner
+							h5.text-ubold  More Than 7M Visitors Each Month
+							p More than 7 million people use our services to find and book airline tickets.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-lg-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.3s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.fa-search(style='font-size: 40px;')
+								span.icon-inner
+							h5.text-ubold  User-Friendly Search System
+							p Convenient and fast search for airline tickets, hotels, and cars.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-lg-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.4s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.mdi.mdi-calendar-multiple-check(style='font-size: 46px;')
+								span.icon-inner
+							h5.text-ubold  Fast and Reliable Ticket Booking
+							p We provide convenient ticket booking system, which is also perfect for first-time travellers.
+
+	// Page Footer
+	include ../sections/_footer-corp

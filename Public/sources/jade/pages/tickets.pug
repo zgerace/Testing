@@ -1,0 +1,311 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Tickets List
+
+block page
+	include ../mixins/_breadcrumb
+	include ../mixins/_thumbnails
+	include ../mixins/_posts
+	include ../mixins/_pagination
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Tickets List', 'Pick the Best Ticket',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Tickets List"
+			}
+		}
+		)
+
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide
+				.range.text-lg-left
+					.cell-lg-8
+						.inset-xl-right-80
+							h2.text-ubold New York, NY (JFK) to London (Any)
+							h5.text-gray.offset-top-30 2 Adults, economy
+
+							hr.divider.divider-lg-left.divider-gray-dark.divider-80.offset-top-40
+
+							.offset-top-60
+								.range.range-xs-justify.text-left
+									.cell-sm-8.cell-md-6.cell-xl-4
+										.range
+											.cell-sm-6
+												span.small Departure
+												//Select 2
+												.offset-top-4
+													input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='departure')
+
+											.cell-sm-6.offset-top-20.offset-sm-top-0
+												span.small Return
+												//Select 2
+												.offset-top-4
+													input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='return')
+
+
+									.cell-sm-4.cell-xl-3.offset-top-20.offset-sm-top-0
+										span.small Sort by
+										//Select 2
+										.offset-top-4
+											select.form-control.select-filter(data-placeholder="Select an option", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+												option Price: low to high
+												option(value="2") Item 1-1
+												option(value="3") Item 1-2
+												option(value="4") Item 1-2
+												option(value="5") Item 2-1
+												option(value="6") Item 2-2
+												option(value="7") Item 2-3
+
+							.offset-top-40
+								ul.list-tickets
+									li.list-item
+										.list-item-inner
+											.list-item-main
+												.list-item-top
+													.list-item-logo
+														img(src='images/logo-01.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 7:55am
+															span.small.reveal-block JFK
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 6h 50m
+															.list-item-content-line
+															.list-item-content-line-bottom.text-info-dr Direct
+														.list-item-content-right
+															.text-bold.text-base 7:45pm
+															span.small.reveal-block LHR
+
+												hr.divider.divider-wide
+												.list-item-bottom
+													.list-item-logo
+														img(src='images/logo-01.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 9:50pm
+															span.small.reveal-block LGW
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 18h 40m
+															.list-item-content-line
+															.list-item-content-line-bottom
+																span.text-primary-dr 1 stop
+																span=' DUB'
+														.list-item-content-right
+															.text-bold.text-base 11:30am (+1)
+															span.small.reveal-block JFK
+
+											.list-item-footer
+												span.small 7 deals from
+												h5.text-bold.list-item-price $1,323
+												a(href='#').btn.btn-primary.btn-xs.btn-no-shadow select
+										.small.text-gray-light.list-item-subtitle Operated by Retro Cruises
+
+									li.list-item
+										.list-item-inner
+											.list-item-main
+												.list-item-top
+													.list-item-logo
+														img(src='images/logo-02.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 7:55am
+															span.small.reveal-block JFK
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 6h 50m
+															.list-item-content-line
+															.list-item-content-line-bottom.text-info-dr Direct
+														.list-item-content-right
+															.text-bold.text-base 7:45pm
+															span.small.reveal-block LHR
+
+												hr.divider.divider-wide
+												.list-item-bottom
+													.list-item-logo
+														img(src='images/logo-03.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 9:50pm
+															span.small.reveal-block LGW
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 18h 40m
+															.list-item-content-line
+															.list-item-content-line-bottom
+																span.text-primary-dr 1 stop
+																span=' DUB'
+														.list-item-content-right
+															.text-bold.text-base 11:30am (+1)
+															span.small.reveal-block JFK
+
+											.list-item-footer
+												span.small 7 deals from
+												h5.text-bold.list-item-price $1,623
+												a(href='#').btn.btn-primary.btn-xs.btn-no-shadow select
+										.small.text-gray-light.list-item-subtitle Operated by Frank’s & Tourner Cruises
+
+									li.list-item
+										.list-item-inner
+											.list-item-main
+												.list-item-top
+													.list-item-logo
+														img(src='images/logo-04.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 7:55am
+															span.small.reveal-block JFK
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 6h 50m
+															.list-item-content-line
+															.list-item-content-line-bottom.text-info-dr Direct
+														.list-item-content-right
+															.text-bold.text-base 7:45pm
+															span.small.reveal-block LHR
+
+												hr.divider.divider-wide
+												.list-item-bottom
+													.list-item-logo
+														img(src='images/logo-05.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 9:50pm
+															span.small.reveal-block LGW
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 18h 40m
+															.list-item-content-line
+															.list-item-content-line-bottom
+																span.text-primary-dr 1 stop
+																span=' DUB'
+														.list-item-content-right
+															.text-bold.text-base 11:30am (+1)
+															span.small.reveal-block JFK
+
+											.list-item-footer
+												span.small 7 deals from
+												h5.text-bold.list-item-price $1,846
+												a(href='#').btn.btn-primary.btn-xs.btn-no-shadow select
+										.small.text-gray-light.list-item-subtitle Operated by Jameson Cruises
+
+									li.list-item
+										.list-item-inner
+											.list-item-main
+												.list-item-top
+													.list-item-logo
+														img(src='images/logo-04.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 7:55am
+															span.small.reveal-block JFK
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 6h 50m
+															.list-item-content-line
+															.list-item-content-line-bottom.text-info-dr Direct
+														.list-item-content-right
+															.text-bold.text-base 7:45pm
+															span.small.reveal-block LHR
+
+												hr.divider.divider-wide
+												.list-item-bottom
+													.list-item-logo
+														img(src='images/logo-05.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 9:50pm
+															span.small.reveal-block LGW
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 18h 40m
+															.list-item-content-line
+															.list-item-content-line-bottom
+																span.text-primary-dr 1 stop
+																span=' DUB'
+														.list-item-content-right
+															.text-bold.text-base 11:30am (+1)
+															span.small.reveal-block JFK
+
+											.list-item-footer
+												span.small 7 deals from
+												h5.text-bold.list-item-price $1,846
+												a(href='#').btn.btn-primary.btn-xs.btn-no-shadow select
+										.small.text-gray-light.list-item-subtitle Operated by Tourner Cruises
+
+									li.list-item
+										.list-item-inner
+											.list-item-main
+												.list-item-top
+													.list-item-logo
+														img(src='images/logo-01.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 7:55am
+															span.small.reveal-block JFK
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 6h 50m
+															.list-item-content-line
+															.list-item-content-line-bottom.text-info-dr Direct
+														.list-item-content-right
+															.text-bold.text-base 7:45pm
+															span.small.reveal-block LHR
+
+												hr.divider.divider-wide
+												.list-item-bottom
+													.list-item-logo
+														img(src='images/logo-03.jpg' alt='')
+													.list-item-content
+														.list-item-content-left
+															.text-bold.text-base 9:50pm
+															span.small.reveal-block LGW
+														.list-item-content-line-wrapper.small
+															.list-item-content-line-top 18h 40m
+															.list-item-content-line
+															.list-item-content-line-bottom
+																span.text-primary-dr 1 stop
+																span=' DUB'
+														.list-item-content-right
+															.text-bold.text-base 11:30am (+1)
+															span.small.reveal-block JFK
+
+											.list-item-footer
+												span.small 7 deals from
+												h5.text-bold.list-item-price $2,298
+												a(href='#').btn.btn-primary.btn-xs.btn-no-shadow select
+										.small.text-gray-light.list-item-subtitle Operated by Tourner Cruises
+
+							.offset-top-30.offset-lg-top-60
+								+pagination-bootstrap("pagination", 1, 3)
+
+					.cell-lg-4
+						.range
+							.cell-lg-12.cell-sm-6
+								+thumbnail-btn('Find a Ship', 'blog-single-post.html', 'images/tickets-01.jpg', '570', '300')
+
+							.cell-lg-12.cell-sm-6.offset-top-30.offset-sm-top-0.offset-lg-top-30
+								+thumbnail-btn('Book a Cruise', 'blog-single-post.html', 'images/tickets-02.jpg', '570', '300')
+						h5.offset-top-46.offset-lg-top-70.text-bold.hr-title Latest Blog Posts
+						.range-xs-center.range.text-sm-left.offset-top-30
+							.cell-sm-10.cell-md-6.cell-lg-12
+								+post-sm("9 Ways to Become a Successful <br class='veil.reveal-lg-block'> Travel Blogger", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-01.jpg", "180", "110" )
+
+							.cell-sm-10.cell-md-6.cell-lg-12.offset-top-50.offset-sm-top-30.offset-md-top-0.offset-lg-top-30
+								+post-sm("Top 9 Cruises of 2016", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-02.jpg", "180", "110" )
+
+							.cell-sm-10.cell-md-6.cell-lg-12.offset-top-50.offset-sm-top-30
+								+post-sm("How to Really Enjoy Your Cruise", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-03.jpg", "180", "110" )
+
+
+	// Page Footer
+	include ../sections/_footer-default

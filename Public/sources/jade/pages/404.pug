@@ -1,0 +1,40 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title 404
+
+block page
+
+	.bg-image-03.context-dark.page-wide
+		// Page Header
+		header
+			a.reveal-inline-block.brand-name(href='index.html')
+				img(src='images/logo-white.png' width='235' height='35' alt='').img-responsive.center-block
+
+		// Page Content
+		main.page-content.page-content-100
+			.page-content-inner
+				.shell
+					h1.text-ubold
+						span.big 404
+					h3.offset-top-20.text-ubold Sorry, But the Page Was Not Found
+					p.offset-top-30.big(style='opacity: .5;') You may have mistyped the address or the page may have moved.
+					a(href='./').offset-top-60.btn.btn-primary.btn-naira.btn-naira-up
+						span.icon.mdi.mdi-arrow-left-bold
+						span back to home page
+
+		// Page Footer
+		footer(style='opacity: .5;')
+			.shell
+				p
+					| &#169;
+					=' '
+					span(id="copyright-year")
+					=' '
+					| All Rights Reserved Terms of Use and
+					=' '
+					a(href="privacy.html") Privacy Policy
+					block footerLink

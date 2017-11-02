@@ -1,0 +1,93 @@
+footer.page-footer
+	.shell.shell-wide.text-sm-left
+		.range.section-60.section-md-90
+			.cell-sm-6.cell-lg-3
+				a.reveal-inline-block(href='./')
+					img(src='images/logo-white.png' width='245' height='35' alt='').img-responsive.center-block
+				p.offset-top-24 Cruise Travel makes booking cruises easy. With us, you can get a great price on your next vacation for multiple destinations and lengths, from Carribean Islands to Norway. Enjoy our exclusive cruise deals!
+			.cell-sm-6.cell-lg-3
+				h5.text-bold Latest Blog Posts
+				hr.divider.divider-50.divider-info.divider-sm-left
+				.offset-top-40
+					.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.post-minimal
+						.unit-left
+							img(src='images/footer-01.jpg' width='100' height='10' alt='').img-responsive.center-block
+						.unit-body
+							span.extra-small Sep 8, 2016
+							p.offset-top-6.offset-sm-top-10.text-bold
+								a(href='blog-single-post.html') The Ultimate Packing List For Female Travelers
+
+					.offset-top-30.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal.post-minimal
+						.unit-left
+							img(src='images/footer-02.jpg' width='100' height='10' alt='').img-responsive.center-block
+						.unit-body
+							span.extra-small Sep 8, 2016
+							p.offset-top-6.offset-sm-top-10.text-bold
+								a(href='blog-single-post.html') How These 5 People Found The Path to Their Dream Trip
+			.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+				.inset-xl-left-50
+					h5.text-bold What People Say
+					hr.divider.divider-50.divider-info.divider-sm-left
+					// Owl Carousel
+					.offset-top-20.offset-md-top-40.owl-dots-left.owl-dots-white.owl-carousel(data-dots='true' data-items='1', data-margin='30', data-mouse-drag="false")
+						blockquote.quote.quote-sm
+							p
+								q “At first I was a little apprehensive about spending 3 days learning about cleaning especially since I have been in the cleaning industry for 43 years!  However, I went in with a very open mind and came out with a mind full of new knowledge and a completely new opinion and insight regarding Green Cleaning!”
+							p
+								cite John Carroll
+						blockquote.quote.quote-sm
+							p
+								q “After attending class I was surprised by the enthusiasm and knowledge. Let’s face it, how often do we find an instructor who is well rounded and is willing to share his hands on experience in the industry while providing you a training in a clear format that is easy to understand?”
+							p
+								cite Jessica Diaz
+						blockquote.quote.quote-sm
+							p
+								q “The ACE online floor care course is great for seasoned floor care technicians and rookies as well.  As someone who did have sone experience with floor care and VCT prior to taking the course I can come out with saying that I have expanded my knowledge and have furthered myself to becoming an expert in floor care.”
+							p
+								cite Joshua Burstein
+			.cell-sm-6.cell-lg-3.offset-top-40.offset-lg-top-0
+				.inset-xl-left-50
+					h5.text-bold Contact Us
+					hr.divider.divider-50.divider-info.divider-sm-left
+					// RD Mailform
+					form.offset-top-40.rd-mailform.text-sm-left(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.form-group.form-group-sm
+							label.text-gray-light.form-label(for="footer-name") Your name
+							input#footer-name.form-control.form-control-dark(type="text" name="name" data-constraints="@Required")
+						.form-group.form-group-sm
+							label.text-gray-light.form-label(for="footer-email") Your e-mail
+							input#footer-email.form-control.form-control-dark(type="email" name="email" data-constraints="@Email @Required")
+						.form-group.form-group-sm
+							label.text-gray-light.form-label(for="footer-message") Message
+							textarea#footer-message.form-control.form-control-dark(style='height: 90px;' name="message" data-constraints="@Required")
+						button(type="submit").btn.btn-primary.btn-xs.btn-naira.btn-naira-up
+							span.icon.fa-envelope-o
+							span Send
+
+		hr
+	div.shell.shell-wide.page-footer-min.small
+		.range.range-xs-middle
+			.cell-sm-6.text-sm-left
+				ul.list-inline
+					li
+						a(href='#').icon.fa-facebook
+					li
+						a(href='#').icon.fa-twitter
+					li
+						a(href='#').icon.fa-pinterest-p
+					li
+						a(href='#').icon.fa-vimeo
+					li
+						a(href='#').icon.fa-google-plus
+					li
+						a(href='#').icon.fa-rss
+			.cell-sm-6.text-sm-right.offset-top-20.offset-sm-top-0
+				p
+					| &#169;
+					=' '
+					span(id="copyright-year")
+					=' '
+					| All rights reserved.
+					=' '
+					a(href="privacy.html") Privacy Policy
+					block footerLink

@@ -1,0 +1,231 @@
+//
+// Nav
+// --------------------------------------------------
+
+.nav-custom{
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $screen-sm-min) {
+    border-radius: 4px;
+    border: 1px solid #d7d7d7;
+  }
+
+  li{
+    margin-top: 3px;
+    margin-left: 3px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+
+  li + li{
+    @media (min-width: $screen-sm-min) {
+      border-left: 1px solid #d7d7d7;
+    }
+  }
+  
+  a{
+    display: block;
+    color: $gray;
+    font-weight: 700;
+    padding: 8px 19px;
+    border: 1px solid #d7d7d7;
+    transition: .3s;
+
+    @media (min-width: $screen-sm-min) {
+      border: none;
+    }
+    
+    @media (min-width: $screen-md-min) {
+      padding: 12px 40px;
+    }
+
+    &:hover{
+      background-color: $brand-primary;
+      color: #fff;
+    }
+
+    &.active{
+      background-color: $brand-info-dr;
+      color: #fff;
+    }
+  }
+}
+
+// Nav tabs
+
+.nav-custom-tabs{
+  display: inline-flex;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  vertical-align: bottom; 
+  overflow: hidden;
+  background-color: $brand-info-dr;
+
+  & + *{
+    border: none !important;
+
+    .resp-accordion{
+      display: none;
+    }
+  }
+
+  .nav-item{
+    display: inline-block;
+    padding: 9px 12px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 14px;
+    font-weight: 900;
+
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+
+    .ie-10 &,
+    .ie-11 &,
+    .ie-edge & {
+      border-bottom: 1px solid $brand-info-dr;
+    }
+
+    @media (min-width: $screen-xs-min) {
+      padding: 13px 24px;
+    }
+
+    @media (min-width: 1400px) {
+      padding-left: 38px;
+      padding-right: 38px;
+    }
+
+    > *{
+      vertical-align: middle;
+    }
+
+    & + :not(.nav-item-active),
+    & + :not(.resp-tab-active){
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 65%;
+        background-color: rgba($gray-lighter,.2);
+      }
+    }
+
+    &:not(.nav-item-active.resp-tab-active){
+      &:hover{
+        background-color: $gray-lighter;
+        color: $brand-info-dr;
+      }
+    }
+
+    .icon{
+      margin-right: 8px;
+      font-size: 22px;
+      display: none;
+
+      @media (min-width: $screen-xs-min) {
+        display: inline;
+      }
+    }
+
+    &-active,
+    &.resp-tab-active,
+    &:hover {
+      background-color: $gray-lighter;
+      color: $brand-info-dr;
+      
+      .ie-10 &,
+      .ie-11 &,
+      .ie-edge & {
+        border-bottom: 1px solid $gray-lighter;
+      }
+    }
+  }
+}
+
+.page .nav-custom-tab{
+  align-self: stretch;
+  padding: 20px;
+  background-color: #1f2746;
+  color: #fff;
+
+  .resp-tab-content{
+    padding: 0;
+  }
+
+  @media (min-width: 1500px) {
+    padding: 40px;
+  }
+
+  &.resp-tabs-container,
+  &{
+    border-radius: 9px;
+    border-top-left-radius: 0;
+  }
+
+  .btn{
+    margin-bottom: 8px;
+  }
+
+  .form-group-label{
+    margin-bottom: 5px;
+    color: #fff;
+    opacity: .3;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+  }
+
+  &.nav-custom-wide{
+    @media (min-width: 1500px) {
+      padding: 29px 30px 36px 40px;
+    }
+  }
+}
+
+.nav-custom-dark{
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.resp-tabs-container.nav-custom-tab{
+  min-height: 321px;
+}
+
+.page .nav-custom-light{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .nav-custom-tab{
+    background-color: #f3f4f7;
+    color: $gray-base;
+  }
+  
+  .form-group-label{
+    opacity: 1;
+    color: #808080;
+  }
+
+  .radio .radio-custom-dummy, .radio-inline .radio-custom-dummy, .checkbox .checkbox-custom-dummy, .checkbox-inline .checkbox-custom-dummy{
+    background-color: #fff;
+    box-shadow: none;
+    border: 1px solid #cacaca;
+  }
+}

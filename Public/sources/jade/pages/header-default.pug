@@ -1,0 +1,55 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Header default
+
+block page
+	include ../mixins/_thumbnails
+	include ../mixins/_posts
+
+	// Page Header
+	include ../sections/_header-float
+
+	// Page Content
+	main.page-content
+		section.section-80.section-md-120.bg-gray-lighter
+			.shell.shell-wide
+				p.view-animate.fadeInUpBigger.delay-04.subtitle-section Hot Deals
+				h2.view-animate.fadeInUpBigger.delay-06.text-center.text-ubold Our Advantages
+
+				hr.view-animate.fadeInUpBigger.delay-06.divider.divider-80.divider-gray-dark
+
+				.offset-top-120.range
+					.cell-sm-6.cell-lg-3.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.1s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.fa-star
+								span.icon-inner
+							h5.text-ubold All-Inclusive Cruises
+							p If you’re looking for a perfect voyage then the #1 option would be our all-inclusive cruise.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-sm-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.2s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.fa-group(style='font-size: 54px;')
+								span.icon-inner
+							h5.text-ubold  Customised Experiences
+							p Any cruise your book on our website can be customized according to your wishes.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-lg-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.3s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.fa-search(style='font-size: 40px;')
+								span.icon-inner
+							h5.text-ubold  User-Friendly Search System
+							p Convenient and fast search for cruise tickets, ships, and destinations.
+
+					.cell-sm-6.cell-lg-3.offset-top-90.offset-lg-top-0.wow.fadeInUp(data-wow-offset='200' data-wow-delay='0.4s')
+						.icon-box-variant-1
+							span.icon-xl.icon.icon-info.icon-circle.fa-credit-card(style='font-size: 46px;')
+								span.icon-inner
+							h5.text-ubold  Payment Facilities For You
+							p We provide a variety of modern payment options including PayPal and credit cards.
+
+	// Page Footer
+	include ../sections/_footer-default

@@ -1,0 +1,111 @@
+include ../mixins/_posts
+
+aside.text-sm-left
+	.range
+		.cell-md-12
+			h5.text-bold.hr-title Search
+			// RD Search
+			form.offset-top-30.form-inline.rd-search(action="search-results.html", method="GET")
+				.form-group
+					label(for="rd-search-form-input" class="form-label") Search
+					input(class="form-control" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+				button(type="submit").btn.btn-primary.btn-sm.btn-naira.btn-naira-up
+					span.icon.fa-search
+					span Search
+		.cell-md-12.offset-top-60.offset-md-top-90
+			h5.text-bold.hr-title Archive
+			.range.offset-top-0
+				.cell-lg-4.cell-md-6.cell-sm-4.cell-xs-6
+					ul.list-marked.list-marked-no-padding
+						li
+							a(href='#').text-info-dr October 2015
+						li
+							a(href='#').text-info-dr January 2016
+						li
+							a(href='#').text-info-dr April 2016
+						li
+							a(href='#').text-info-dr July 2016
+						li
+							a(href='#').text-info-dr October 2016
+				.cell-lg-4.cell-md-6.cell-sm-4.cell-xs-6.offset-top-20.offset-xs-top-0
+					ul.list-marked.list-marked-no-padding
+						li
+							a(href='#').text-info-dr November 2015
+						li
+							a(href='#').text-info-dr February 2016
+						li
+							a(href='#').text-info-dr May 2016
+						li
+							a(href='#').text-info-dr August 2016
+				.cell-sm-4.cell-md-12.cell-lg-4.offset-top-20.offset-sm-top-0.offset-md-top-20.offset-lg-top-0
+					ul.list-marked.list-marked-no-padding
+						li
+							a(href='#').text-info-dr December 2015
+						li
+							a(href='#').text-info-dr March 2016
+						li
+							a(href='#').text-info-dr June 2016
+						li
+							a(href='#').text-info-dr September 2016
+
+		.cell-md-12.offset-top-60.offset-md-top-90
+			h5.text-bold.hr-title Gallery
+
+			.range.range-sm-gutter.offset-top-0(data-photo-swipe-gallery='gallery')
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-01.jpg').thumbnail-img
+						img(src='images/gallery-48.jpg' width='185' height='185' alt='').img-responsive.center-block
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-02.jpg').thumbnail-img
+						img(src='images/gallery-49.jpg' width='185' height='185' alt='').img-responsive.center-block
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-03.jpg').thumbnail-img
+						img(src='images/gallery-50.jpg' width='185' height='185' alt='').img-responsive.center-block
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-04.jpg').thumbnail-img
+						img(src='images/gallery-51.jpg' width='185' height='185' alt='').img-responsive.center-block
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-05.jpg').thumbnail-img
+						img(src='images/gallery-52.jpg' width='185' height='185' alt='').img-responsive.center-block
+				.cell-sm-3.cell-md-4.cell-xs-4
+					a(data-photo-swipe-item='', data-size='1200x800', href='images/gallery-sidebar-original-06.jpg').thumbnail-img
+						img(src='images/gallery-53.jpg' width='185' height='185' alt='').img-responsive.center-block
+
+		.cell-md-12.offset-top-60.offset-md-top-90
+			h5.text-bold.hr-title About
+
+			p Cruise Travel is the world’s first inspirational travel search service that focuses on what’s really important: your Interests and your Budget!
+			p How practical is an amazing weekend break for skiing if what you really look forward is relaxing on a sandy beach? How good a great destination can be, if it’s too expensive to get there? Cruise Travel offers an innovative and useful online experience, so you can find your perfect destination in just a couple of clicks!
+
+		.cell-md-12.offset-top-60.offset-md-top-90
+			h5.text-bold.hr-title Recent Posts
+
+			.range-xs-center.range.text-sm-left.offset-top-30
+				.cell-sm-12.cell-sm-6.cell-md-12
+					+post-sm("9 Ways to Become a Successful <br class='veil.reveal-md-block'> Travel Blogger", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-01.jpg", "180", "110" )
+
+				.cell-sm-12.cell-sm-6.cell-md-12.offset-top-50.offset-sm-top-30.offset-sm-top-0.offset-md-top-30
+					+post-sm("Top 9 Cruises of 2016", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-02.jpg", "180", "110" )
+
+				.cell-sm-12.cell-md-12.offset-top-50.offset-sm-top-30
+					+post-sm("How to Really Enjoy Your Cruise", 'Sep 12, 2016 at 3:28pm', 'blog-single-post.html', "images/post-03.jpg", "180", "110" )
+
+		.cell-md-12.offset-top-60.offset-md-top-90
+			h5.text-bold.hr-title Tags
+			ul.group.group-sm
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow articles
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow news
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow travel
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow london
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow new york
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow Paris
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow cruise
+				li
+					a(href='#').btn.btn-tag.btn-no-shadow Family Cruises

@@ -1,0 +1,103 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 2
+
+block title
+	title FAQ page
+
+block page
+	include ../mixins/_breadcrumb
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'FAQ page', 'Frequently Asked Questions',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "About",
+				"href": "#"
+			},
+			2: {
+				"title": "FAQ page"
+			}
+		}
+		)
+
+		section.section-80.section-md-120.bg-image-02
+			.shell.shell-wide.text-lg-left
+				.range
+					.cell-md-7.cell-lg-5.cell-lg-preffix-6.cell-md-preffix-5
+						h2.text-ubold Frequently Asked Questions
+						hr.divider.divider-md-left.divider-gray-dark.divider-80
+
+						// Responsive-tabs
+						.offset-top-50.offset-lg-top-90.responsive-tabs(data-type="accordion").responsive.responsive-tabs-classic
+							ul.resp-tabs-list.tabs-1.text-center.tabs-group-default
+								li What will the weather be like?
+								li What amenities will I find in my cabin?
+								li What services are available on board?
+								li What languages are spoken on board?
+								li What about Spa and fitness services on board?
+							.resp-tabs-container.text-sm-left.tabs-group-default
+								div
+									p For the comfort and pleasure of our guests, our itineraries generally follow warm rather than hot weather patterns. The world's climate being at times unpredictable, our small ships are seldom far from a sheltered bay or port. Our Greece and Turkey cruise programs operate from April to October, however we also offer an off-season themed cruise program in Greece, the Antiquity to Byzantium, operating in March, April, October and November.Our cruise programs in West Africa, Cape Verde, Cuba, Costa Rica and the Panama operate from November to April. In the Seychelles we are offering 3-night, 4-night and 7-night cruise programs all year round.
+								div
+									p All cabins have private, nicely appointed bathrooms with showers. All cabins are air-conditioned and fittedwith  central music and with telephone for intra ship communication. All ships have in lounges TV's with satellite channels with at least English speaking channels. There are hairdryers in each cabin. Also, almost all of our ships have TV's or flat-screan TV's, safe boxes, mini-fridges, DVD players in cabins. For more details, please visit the Ships section on our website.   
+								div
+									p Aboard our small ships you will find elegant dining rooms, spacious sun decks and comfortable lounges. No pools are offered as it is common for our guests to swim off our ships or for passengers to reach secluded beaches by tender.   Your cruise program is either with breakfast plus lunch or dinner or with all meals. Meals are served at set times and there is flexible seating. Limited laundry service is available at a cost on our small ships. The shore excursions are offered at a supplemental cost. The M/Y Pegasus, the M/Y Harmony V and the M/Y Variety Voyager offers a small wellness suite with massage and other beauty treatments.   Sports activities: Swimming off the ships is possible as well as snorkeling, kayaking and canoeing. In some destinations it is possible to organize diving excursions. 
+								div
+									p Language on board is English but German, French, Spanish or Russian can be spoken by our Cruise Coordinators and Hotel Crew on scheduled cruise sailings. In general there is a multilingual environment and you will have a chance to mix with a variety of nationalities. Excursions and public announcements are usually in English. English and sometimes German and French are widely spoken on all ports of call visited by our small ships.
+								div
+									p If you want to keep in shape while you cruise with us, feel free to visit our fully-equipped gym (towels provided). Some of our vessels also have a Jacuzzi available for a post-workout soak or if you just want to relax and enjoy some hydrotherapy (the size of each gym and its available amenities vary from ship to ship). 
+
+
+		section.section-80.section-lg-120.bg-gray-lighter
+			.shell.shell-wide
+				.range.range-xs-center
+					.cell-md-8.cell-lg-6
+						h2.text-ubold Some of Your Questions
+						hr.divider.divider-gray-dark.divider-80
+
+						.text-md-left.offs-top-60
+							ul.list-marked
+								li
+									a(href='#q1' data-custom-scroll-to="q1").text-info-dr What destinations do you travel to?
+								li
+									a(href='#q2' data-custom-scroll-to="q2").text-info-dr What are the benefits of cruising over other types of travel?
+								li
+									a(href='#q3' data-custom-scroll-to="q3").text-info-dr Are there special prices for children or infants?
+								li
+									a(href='#q4' data-custom-scroll-to="q4").text-info-dr Why should I use Online Check-In?
+								li
+									a(href='#q5' data-custom-scroll-to="q5").text-info-dr How far in advance do I need to check-in for my cruise?
+
+							dl.list-terms-variant-1.offset-top-60
+								dt#q1.h5 What destinations do you travel to?
+								dd
+									p Our cruises visit a variety of exciting ports in Alaska, Asia, Australia/New Zealand, the Bahamas, Bermuda, Canada/New England, the Caribbean, Europe, Hawaii, Mexico, the Pacific Northwest, the Panama Canal and South America.
+
+								dt#q2.h5 What are the benefits of cruising over other types of travel?
+								dd
+									p Cruising has become a popular option for a number of reasons. For example, with so much included in the price - like meals, onboard performances and more - cruising offers tons of bang for your buck. A variety of onboard and onshore activities make cruising fun for everyone from spa-lovers to adventure-seekers to sun worshipers.
+
+								dt#q3.h5 Are there special prices for children or infants?
+								dd
+									p Because our cruise vacations offer so many special activities for children, we do not usually offer discounted rates. However, anyone staying in the same stateroom with two full-fare paying guests will pay a special third and/or fourth guest rate.
+
+								dt#q4.h5 Why should I use Online Check-In?
+								dd
+									p Completing the Online Check-In process for all the guests in your reservation will save you from having to fill out forms at the pier and needs to be completed 3 days prior to your saildate.
+
+								dt#q5.h5 How far in advance do I need to check-in for my cruise?
+								dd
+									p Cruise Travel requires guests to be checked in no later than 60 minutes prior to the scheduled sailing time. Guests arriving late will not be permitted to sail. This supports government regulations in some ports that require cruise lines to submit a departure manifest 60 minutes prior to sailing. Guests are requested to complete Online Check-In no later than 3 days prior to the cruise in order to expedite the pier check-in process. 
+
+	// Page Footer
+	include ../sections/_footer-default

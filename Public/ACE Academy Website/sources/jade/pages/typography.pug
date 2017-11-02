@@ -1,0 +1,159 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 4
+
+block title
+  title Typography
+
+block page
+  include ../mixins/_breadcrumb
+  include ../mixins/_quotes
+
+  // Page Header
+  include ../sections/_header-default
+
+  // Page Content
+  main.page-content
+  
+    +breadcrumbs('images/breadcrumbs-04.jpg', 'Typography', 'Text Decoration',
+    {
+      0: {
+        "title": "Home",
+        "href": "./"
+      },
+      1: {
+        "title": "Pages",
+        "href": "#"
+      },
+      2: {
+        "title": "Typography"
+      }
+    }
+    )
+
+    section.section-80.section-md-120
+      .shell.text-md-left
+        .range
+          .cell-md-8
+            h1 H1 Heading
+            p.offset-top-20.offset-md-top-30 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h2.offset-top-40.offset-md-top-90 H2 Heading
+            p.offset-top-20.offset-md-top-30 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h3.offset-top-40.offset-md-top-90 H3 Heading
+            p.offset-top-20 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h4.offset-top-40.offset-md-top-90 H4 Heading
+            p.offset-top-20 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h5.offset-top-40.offset-md-top-90 H5 Heading
+            p.offset-top-20 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h6.offset-top-40.offset-md-top-90 H6 Heading
+            p.offset-top-6 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+
+          .cell-md-4.veil.reveal-md-block
+            h1 H1
+            h2.offset-top-20 H2 Heading
+            h3.offset-top-30 H3 Heading
+            h4.offset-top-30 H4 Heading
+            h5.offset-top-20 H5 Heading
+            h6.offset-top-20 H6 Heading
+          .cell-md-8.offset-top-80.offset-md-top-120
+            h3.text-ubold Blockquote
+            .offset-top-40
+              +quote('Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.', 'John Carroll')
+
+            h3.text-ubold.offset-top-80.offset-md-top-120 HTML Text Elements
+            div.offset-top-20
+              a(href='#') Link text
+              =' '
+              a(href='#').hover Hover link text
+              =' '
+              a(href='#').focus Press link
+              =' '
+              // Tooltip
+              span.text-primary(data-toggle='tooltip', data-placement='top', title='Tooltips Text') Tooltips
+              =' '
+              span.text-bold This is a bold text
+              =' '
+              span.text-italic Italic text
+              =' '
+              span.mark Highlighted text
+              =' '
+              | Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+              =' '
+              span.text-underline Underlined text
+              =' '
+              span.text-strike Strickethrough text
+
+            h3.text-ubold.offset-top-80.offset-md-top-120 Unordered List
+            p.offset-top-30 We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+            ul.list-marked
+              li Consulting
+              li Customer Service
+              li Innovation
+              li Management
+              li Ethics
+            p.offset-top-10 We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+
+            h3.text-ubold.offset-top-80.offset-md-top-120 Ordered List
+            p.offset-top-30 We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+            ol.list-index
+              li Consulting
+              li Customer Service
+              li Innovation
+              li Management
+              li Ethics
+            p.offset-top-10 We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+
+
+        h3.text-ubold.offset-top-80.offset-md-top-120 Icon List
+        .range.range-xs-center.text-center.offset-top-60
+          .cell-md-4.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-star
+              span.icon-inner
+            h5.text-ubold Customised Experiences
+            hr.divider.divider-info.divider-50
+            p Any cruise you book on our website can be customized according to your wishes.
+            
+          .cell-md-4.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-group(style='font-size: 54px;')
+              span.icon-inner
+            h5.text-ubold  User-Friendly Search System
+            hr.divider.divider-info.divider-50
+            p Convenient and fast search for cruise tickets, ships, and destinations.
+            
+          .cell-md-4.icon-box
+            span.icon-xl.icon.icon-info.icon-circle.fa-search(style='font-size: 40px;')
+              span.icon-inner
+            h5.text-ubold  Payment Facilities For You
+            hr.divider.divider-info.divider-50
+            p We provide a variety of modern payment options including PayPal and credit cards.
+
+        .range.offset-top-80.offset-md-top-120
+          .cell-md-8
+            h3.text-ubold Image Centered
+            img(src='images/typography-01.jpg' alt='').img-responsive.offset-top-40
+            p.offset-top-12.offset-md-top-10.text-gray-light.text-italic Golden Gate Bridge
+            p.offset-top-5.offset-md-top-20 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h3.text-ubold.offset-top-80.offset-md-top-120 Image Left
+            .range.offset-top-40
+              .cell-md-6
+                img(src='images/typography-02.jpg' alt='').img-responsive.center-block
+              .cell-md-6.offset-top-20.offset-md-top-0
+                p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+            h3.text-ubold.offset-top-80.offset-md-top-120 Image Right
+            .range.offset-top-40
+              .cell-md-6.cell-md-push-1
+                img(src='images/typography-02.jpg' alt='').img-responsive.center-block
+              .cell-md-6.offset-top-20.offset-md-top-0
+                p Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page.
+
+  // Page Footer
+  include ../sections/_footer-default

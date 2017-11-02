@@ -1,0 +1,924 @@
+//
+// Custom typography
+// --------------------------------------------------
+
+// Page
+// -------------------------
+
+.page {
+  overflow: hidden;
+}
+
+.page-content-100{
+  min-height: calc(100vh - 124px - 161px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.page-content-inner{
+  vertical-align: middle;
+  display: table-cell;
+  flex-grow: 1;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+// Fonts
+// -------------------------
+
+.font-default {
+  font-family: $font-family-base;
+}
+
+// Basic Typography
+// -------------------------
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+.h1 {
+  font-size: 34px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  @media (min-width: $screen-sm-min) {
+    letter-spacing: 0.06em;
+  }
+
+  &.text-ubold{
+    color: $gray-dark;
+  }
+
+  @media (min-width: $screen-md-min) {
+    line-height: $font-lh-h1;
+    font-size: $font-size-h1;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 32px;
+  line-height: 1.4;
+
+  &.text-ubold{
+    color: $gray-dark;
+  }
+
+  @media (min-width: $screen-md-min) {
+    line-height: $font-lh-h2;
+    font-size: $font-size-h2;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 28px;
+  line-height: 1.4;
+
+  @media (min-width: $screen-md-min) {
+    line-height: $font-lh-h3;
+    font-size: $font-size-h3;
+  }
+}
+
+h4,
+.h4 {
+  line-height: $font-lh-h4;
+  font-size: $font-size-h4;
+}
+
+h5,
+.h5 {
+  line-height: $font-lh-h5;
+  font-size: $font-size-h5;
+}
+
+h6,
+.h6 {
+  color: $gray-light;
+  line-height: $font-lh-h6;
+  font-size: $font-size-h6;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  a {
+    transition: .3s all ease;
+  }
+
+  a:hover {
+    color: $brand-primary;
+  }
+
+  .small {
+    color: $gray-dark;
+  }
+}
+
+sub, sup{
+  color: $gray;
+  font-size: 60%;
+}
+
+p,
+.p,
+.list {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: $screen-xs) {
+  .big {
+    font-size: 20px;
+    line-height: 28px;
+
+    h1 &,
+    .h1 & {
+      font-size: 400%;
+      line-height: 1.2;
+    }
+  }
+}
+
+.big {
+  h2 &,
+  .h2 & {
+    line-height: 1.2;
+
+    @media (min-width: $screen-xs-min) {
+      font-size: 120%;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 166.66%;
+    }
+  }
+}
+
+.extra-small{
+  font-size: 12px;
+  line-height: floor(($font-size-small * $line-height-small));
+}
+
+.small{
+  font-size: 14px;
+}
+
+code {
+  padding: 5px 7px;
+  font-size: 75%;
+  color: $brand-danger;
+  background-color: $gray-lighter;
+  border-radius: 2px;
+}
+
+mark,
+.mark {
+  background-color: $brand-primary;
+  color: $white;
+  padding: .1em;
+}
+
+// Lists
+// -------------------------
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list {
+  > li + li {
+    margin-top: 10px;
+  }
+}
+
+// List inline
+//
+
+.list-inline {
+  margin-left: -11px;
+  margin-right: -11px;
+
+  > li {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+
+// Description Lists
+dl {
+  margin: 0;
+}
+
+// List terms
+//
+
+.list-terms {
+  margin-bottom: 60px;
+  dt + dd { margin-top: 21px; }
+  dd + dt { margin-top: 60px; }
+}
+
+.list-terms-variant-1 {
+  dt + dd { margin-top: 10px; }
+  dd + dt { margin-top: 60px; }
+}
+
+// List index
+//
+
+.list-index {
+  padding-left: 29px;
+  text-align: left;
+  counter-reset: li;
+
+  li {
+    &:before {
+      content: counter(li, decimal) '.';
+      counter-increment: li;
+      display: inline-block;
+      margin-right: 12px;
+      color: $gray;
+    }
+
+    & + li{
+      margin-top: 10px;
+    }
+  }
+}
+
+// List marked
+//
+
+.list-marked {
+  text-align: left;
+  padding-left: 30px;
+
+  &-no-padding{
+    padding-left: 0;
+  }
+
+  li {
+    position: relative;
+    padding-left: 26px;
+
+    &:before {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      display: inline-block;
+      position: absolute;
+      left: 1px;
+      top: 4px;
+      color: $brand-primary;
+      font-size: 12px;
+    }
+
+    & + li{
+      margin-top: 10px;
+    }
+  }
+}
+
+.list-marked-flex{
+  li{
+    display: flex;
+
+    > a{
+      margin-right: auto;
+    }
+
+    > div{
+      display: flex;
+      align-items: center;
+      margin-left: 6px;
+    }
+  }
+}
+
+
+// List tickets
+
+.list-tickets{
+
+  .list-item{
+    margin-top: 30px;
+    background-color: $white;
+    transition: .4s box-shadow;
+    padding: 30px 12px;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+      padding: 13px 30px 12px 30px;
+    }
+
+    @media (min-width: 1600px) {
+      padding: 13px 12.2% 12px 40px;
+    }
+
+
+    &:hover{
+      box-shadow: 0 0 13px 0 rgba(#516279, .18);
+    }
+
+    .divider{
+      margin-top: 14px;
+      margin-bottom: 14px;
+      background-color: #cacaca;
+
+      @media (max-width: $screen-sm-min - 1) {
+        height: auto;
+        width: 1px;
+        margin: 0 14px;
+      }
+    }
+
+    .btn{
+      margin-top: 12px;
+      padding: 11px 20px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    &-price{
+      margin-top: 3px;
+    }
+
+    &-inner{
+      @media (min-width: $screen-sm-min) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-subtitle{
+      margin-top: 11px;
+      text-align: center;
+
+      @media (min-width: $screen-sm-min) {
+        text-align: left;
+      }
+    }
+
+    &-main{
+      flex-grow: 1;
+
+      display: flex;
+      justify-content: center;
+
+      @media (min-width: $screen-sm-min) {
+        display: block;
+      }
+    }
+
+    &-footer{
+      margin-top: 16px;
+      text-align: center;
+
+      @media (min-width: $screen-sm-min) {
+        margin-top: 0;
+        margin-left: 7.6%;
+        text-align: left;
+      }
+    }
+
+    &-top,
+    &-bottom{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-basis: 50%;
+
+      @media (min-width: $screen-sm-min) {
+        flex-basis: 0;
+        flex-direction: row;
+      }
+    }
+
+    &-logo{
+      margin-bottom: 10px;
+
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: 0;
+        width: 126px;
+      }
+
+      img{
+        @media (max-width: $screen-sm-min - 1) {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &-content{
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 1;
+
+      @media (min-width: $screen-sm-min) {
+        display: flex;
+        margin-left: auto;
+      }
+
+      &-left{
+        @media (min-width: $screen-sm-min) {
+          text-align: right;
+        }
+      }
+
+      &-right{
+        @media (min-width: $screen-sm-min) {
+          text-align: left;
+        }
+      }
+
+      &-line{
+        position: relative;
+        height: 1px;
+        margin: 5px 0;
+        background-color: $gray-base;
+
+        &:after{
+          position: absolute;
+          right: 0;
+
+          content: '';
+          top: -4px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 4px 0 4.4px 8px;
+          border-color: transparent transparent transparent #3e3f40;
+        }
+
+
+        &-wrapper{
+          flex-basis: 260px;
+          text-align: center;
+          margin: 12px 0;
+
+          @media (min-width: $screen-sm-min) {
+            margin: 0 18px;
+          }
+        }
+      }
+
+      &-left,
+      &-right{
+        @media (min-width: $screen-sm-min) {
+          margin-top: 6px;
+          min-width: 95px;
+        }
+
+        @media (min-width: 1400px) {
+          min-width: 142px;
+        }
+      }
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Blockquotes
+blockquote {
+  q{
+    &:before,
+    &:after{ content: none; }
+  }
+  cite { font-style: normal; }
+}
+
+.quote{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-left: none;
+  padding-left: 60px;
+
+  line-height: 1.4;
+  font-size: 16px;
+  text-align: left;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 20px;
+  }
+
+  q{
+    font-style: italic;
+  }
+
+  p + p{
+    margin-top: 10px;
+
+    @media (min-width: $screen-md-min) {
+      margin-top: 17px;
+    }
+  }
+
+  cite{
+    position: relative;
+    padding-left: 40px;
+
+    &:before{
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 30px;
+      height: 1px;
+      background-color: $gray-base;
+      content: '';
+    }
+
+    &.text-gray{
+      &:before{
+        background-color: #808080;
+      }
+    }
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #3e3f40;
+  }
+
+  &:before{
+    content: '\f373';
+    font-family: "Material Design Icons";
+    position: absolute;
+    top: -11px;
+    left: -10px;
+
+    display: inline-block;
+    transform: rotate(180deg);
+
+    font-size: 60px;
+    line-height: 1;
+    color: $brand-info;
+  }
+}
+
+.quote-sm{
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 24px;
+
+  q{
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  p + p{
+    margin-top: 23px;
+  }
+
+  cite{
+    color: $white;
+
+    &:before{
+      background-color: $white;
+    }
+  }
+
+  &:before{
+    content: none;
+  }
+}
+
+html .quote-boxed{
+  position: relative;
+  margin: 10px 0;
+  border-left: none;
+  background-color: $white;
+  font-size: 16px;
+  transition: .3s;
+  padding: 30px 30px 30px 30px;
+
+  @media (min-width: $screen-xs-min) {
+    padding-left: 68px;
+  }
+
+  @media (min-width: 1800px) {
+    padding: 50px 60px 50px 108px;
+  }
+
+  &:hover{
+    box-shadow: 0 0 13px 0 rgba(#516279, .18);
+  }
+
+
+  &:before{
+    font-family: "Material Design Icons";
+    position: absolute;
+    top: 25px;
+    left: 9px;
+
+    display: inline-block;
+    transform: rotate(180deg);
+    font-size: 50px;
+
+    line-height: 1;
+    color: $brand-info;
+
+    @media (min-width: $screen-xs-min) {
+      content: '\f373';
+    }
+
+    @media (min-width: $screen-xl-min) {
+      top: 38px;
+      left: 39px;
+      font-size: 60px;
+    }
+  }
+
+  .unit{
+    margin-top: 17px;
+  }
+
+  q{
+    font-size: 20px;
+    line-height: 28px;
+    font-style: italic;
+  }
+}
+
+.quote-modern{
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  q{
+    display: block;
+  }
+
+  p{
+    padding: 23px 42px;
+    background-color: $white;
+
+    @media (min-width: $screen-xs-min) {
+      padding-bottom: 49px;
+    }
+
+
+    &:before{
+      display: inline-block;
+      font-family: "Material Design Icons";
+      transform: rotate(180deg);
+      font-size: 60px;
+      margin-left: -12px;
+
+      line-height: 1;
+      color: $brand-info;
+      font-style: normal;
+
+      @media (min-width: $screen-xs-min) {
+        content: '\f373';
+      }
+    }
+  }
+
+  .unit.unit-spacing-sm.unit-horizontal{
+    background-color: $gray-dark;
+
+    .unit-left + .unit-body{
+
+      @media (max-width: $screen-sm-min - 1) {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.quote-wide{
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-size: 16px;
+
+  q{
+    &:before{
+      display: block;
+      font-family: "Material Design Icons";
+      transform: rotate(180deg);
+      font-size: 60px;
+      line-height: 1;
+      color: $brand-info;
+      font-style: normal;
+      margin-bottom: 4px;
+
+      @media (min-width: $screen-sm-min) {
+        content: '\f373';
+      }
+    }
+  }
+}
+
+
+// Addresses
+address {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+// Backgrounds
+// -------------------------
+
+// Contextual backgrounds
+//
+.bg-gray-dark {
+  @include bg-variant-custom(#{$gray-dark});
+
+  .post-blog-grid .post-blog-grid-footer{
+    background-color: #f3f4f7;
+
+    .text{
+      color: $gray-base;
+
+      &[href]:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.bg-gray-darken {
+  @include bg-variant-custom(#{$gray-darken});
+
+  .post-blog-grid .post-blog-grid-footer{
+    background-color: #f3f4f7;
+
+    .text{
+      color: $gray-base;
+
+      &[href]:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.bg-gray-lighter {
+  @include bg-variant-custom(#{$gray-lighter});
+}
+
+.bg-gray {
+  @include bg-variant-custom(#{$gray});
+}
+
+.context-dark{
+  #{headings()},
+  &{
+    color: $white;
+  }
+}
+
+.bg-image-01{
+  background: #1f2746;
+
+  @media (min-width: $screen-md-min) {
+    background: #1f2746 no-repeat url('../images/overview-02.jpg') center;
+  }
+}
+
+.bg-image-02{
+  @media (min-width: $screen-md-min) {
+    background: no-repeat url('../images/background-01.jpg') center bottom;
+    background-size: contain;
+  }
+}
+
+.bg-image-04{
+  @media (min-width: $screen-lg-min) {
+    background: no-repeat url('../images/background-04.jpg') center bottom;
+    background-size: contain;
+  }
+}
+
+.bg-image-03{
+  background: no-repeat url('../images/background-02.jpg') center; background-size: cover;
+}
+
+.bg-image-05{
+  background: no-repeat url('../images/background-07.jpg') center; background-size: cover;
+}
+
+.bg-image-06{
+  background: no-repeat url('../images/breadcrumbs-04.jpg') center; background-size: cover;
+}
+
+// Colors
+// -------------------------
+
+// Contextual colors
+//
+
+.page {
+  @include text-emphasis-variant('.text-primary', $brand-primary);
+  @include text-emphasis-variant('.text-primary-dr', $brand-primary-dr);
+  @include text-emphasis-variant('.text-info', $brand-info);
+  @include text-emphasis-variant('.text-info-dr', $brand-info-dr);
+  @include text-emphasis-variant('.text-dark', $gray-dark);
+  @include text-emphasis-variant('.text-base', $gray-base);
+  @include text-emphasis-variant('.text-gray', $gray);
+  @include text-emphasis-variant('.text-gray-light', $gray-light);
+  @include text-emphasis-variant('.text-white', $white);
+  @include text-emphasis-gradient('.text-primary-grad', #ad146a, #c62a82);
+}
+
+
+// Page footer
+// -------------------------
+
+.page-footer {
+  background-color: $gray-darken;
+  color: $white;
+  
+  a,
+  p {
+    color: #85a3b5;
+  }
+  
+  a:hover{
+    color: $brand-info;
+    text-decoration: none;
+  }
+
+  .divider-50{
+    margin-top: 12px;
+  }
+
+  #{headings()}{
+    color: $white;
+  }
+
+  &-min{
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .icon{
+      color: #cacaca;
+      font-size: 18px;
+    }
+  }
+
+
+  .post-minimal {
+    a{
+      color: $white;  
+      &:hover{
+        color: $brand-info;   
+      }
+    }
+    span {
+      color: #85a3b5;
+    }
+  }
+}
+
+// Footer widget variant
+
+//.page-footer-widget{
+//
+//  .page-footer-min{
+//    a,
+//    &{
+//      color: #85a3b5;
+//    }
+//  }
+//}
+
+
+.subtitle-section {
+  font-size: 18px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 20px;
+    color: $brand-info-dr;
+  }
+  
+}

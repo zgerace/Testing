@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 4
+
+block title
+	title Progress Bars
+
+block page
+	include ../mixins/_breadcrumb
+	include ../mixins/_counter
+
+	// Page Header
+	include ../sections/_header-default
+
+	// Page Content
+	main.page-content
+		+breadcrumbs('images/breadcrumbs-04.jpg', 'Progress Bars', 'Choose your style',
+		{
+			0: {
+				"title": "Home",
+				"href": "./"
+			},
+			1: {
+				"title": "Pages",
+				"href": "#"
+			},
+			2: {
+				"title": "Progress Bars"
+			}
+		}
+		)
+
+		section.section-80.section-md-120
+			.shell
+				h2.text-ubold Progress Bars, Skill Bars, Counters
+				hr.divider.divider-gray-dark.divider-80.divider-offset
+				div.offset-md-top-30.offset-top-20
+					p These elements are vital to every website’s design, and with them you are able
+						br.veil.reveal-md-block
+						| to improve the overall look of your resource and attract more clients.
+
+				.range-xs-center.range.text-md-left.offset-top-40.offset-lg-top-60
+					.cell-md-5.cell-md-preffix-1.cell-md-push-1
+						h5 Welcome to Our Website
+						p.offset-top-10 Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+
+					.cell-md-6.cell-sm-9.offset-top-30.offset-md-top-0
+						.progress-wrapper
+							.progress-title Cruise Tickets
+							.progress-counter 78%
+							.progress
+								.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='78', aria-valuemin='0', aria-valuemax='100', style='width: 78%;')
+						.progress-wrapper
+							.progress-title Special Offers
+							.progress-counter 52%
+							.progress
+								.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='52', aria-valuemin='0', aria-valuemax='100', style='width: 52%;')
+						.progress-wrapper
+							.progress-title Unique Destinations
+							.progress-counter 21%
+							.progress
+								.progress-bar.progress-bar-info(role='progressbar', aria-valuenow='21', aria-valuemin='0', aria-valuemax='100', style='width: 21%;')
+		section.section-lg-top-100.section-90.bg-gray-dark.context-dark
+			.shell
+				.range.range-xs-center.text-md-left
+					.cell-md-3.cell-xs-6.cell-sm-5
+						+counter('0', '10', 'Years of Experience')
+					.cell-md-3.cell-xs-6.cell-sm-5.offset-top-40.offset-xs-top-0
+						+counter('0', '7', 'Partners Worldwide')
+
+					.cell-md-3.cell-xs-6.cell-sm-5.offset-top-40.offset-md-top-0
+						+counter('0', '55', 'Qualified Specialists')
+
+					.cell-md-3.cell-xs-6.cell-sm-5.offset-top-40.offset-md-top-0
+						+counter('0', '12', 'New Services')
+
+		section.section-lg-100.section-lg-bottom-140.section-80
+			.shell
+				// TimeCircles
+				.DateCountdown-wrapper.DateCountdown-dark
+					.DateCountdown(data-date='2017-05-01 00:00:00')
+
+	// Page Footer
+	include ../sections/_footer-default

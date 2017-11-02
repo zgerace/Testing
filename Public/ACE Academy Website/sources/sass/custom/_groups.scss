@@ -1,0 +1,97 @@
+// Element groups
+// --------------------------------------------------
+
+html {
+  .group {
+    @include element-groups-custom(27px, 27px);
+  }
+
+  .group-xs {
+    @include element-groups-custom(5px, 5px);
+  }
+
+  .group-sm {
+    @include element-groups-custom(10px, 10px);
+  }
+
+  .group-lg {
+    transform: translateY(-10px);
+    margin-bottom: -10px;
+    margin-left: -30px;
+
+    @media (min-width: $screen-md-min) {
+      margin-left: -58px;
+    }
+
+    > *, > *:first-child {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 30px;
+
+      @media (min-width: $screen-md-min) {
+        margin-left: 58px;
+      }
+    }
+  }
+
+  .group-42 {
+    transform: translateY(-10px);
+    margin-bottom: -10px;
+    margin-left: -10px;
+
+    @media (min-width: $screen-md-min) {
+      margin-left: -42px;
+    }
+
+    > *, > *:first-child {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 10px;
+
+      @media (min-width: $screen-md-min) {
+        margin-left: 42px;
+      }
+    }
+  }
+  .group-26 {
+    transform: translateY(-10px);
+    margin-bottom: -10px;
+    margin-left: -10px;
+
+    @media (min-width: $screen-md-min) {
+      margin-left: -26px;
+    }
+
+    > *, > *:first-child {
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 10px;
+
+      @media (min-width: $screen-md-min) {
+        margin-left: 26px;
+      }
+    }
+  }
+
+  .group-xl {
+    @include element-groups-custom(30px, 30px);
+  }
+
+  .group-top {
+    > *, > *:first-child {
+      vertical-align: top;
+    }
+  }
+
+  .group-middle {
+    > *, > *:first-child {
+      vertical-align: middle;
+    }
+  }
+
+  .group-bottom {
+    > *, > *:first-child {
+      vertical-align: bottom;
+    }
+  }
+}

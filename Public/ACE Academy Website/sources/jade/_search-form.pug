@@ -1,0 +1,347 @@
+// Responsive-tabs
+ul.nav-custom-tabs.resp-tabs-list
+	li.nav-item
+		span.icon.fa-ship
+		span cruise
+	li.nav-item
+		span.icon.fa-edit
+		span offers
+	li.nav-item
+		span.icon.fa-anchor
+		span ships
+.resp-tabs-container.nav-custom-tab.nav-custom-wide
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-8
+					.form-group.radio-inline-wrapper
+						label
+							| Fare Basis: 
+						label.radio-inline
+							input(name="input-group-radio", value="radio-2", type="radio")
+							| Single
+						label.radio-inline
+							input(name="input-group-radio", value="radio-3", type="radio")
+							| Double
+
+				.offset-top-6.offset-md-top-0.cell-md-4.text-md-right
+					.form-group
+						label.checkbox-inline
+							input(name="input-group-radio", value="checkbox-1", type="checkbox")
+							| Already Booked
+
+				.range.offset-top-15
+					.cell-xs
+						.form-group
+							label.form-group-label Destination
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option Spain  (5)
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+						.form-group
+							label.checkbox-inline
+								input(name="input-group-radio", value="checkbox-1", type="checkbox")
+								| Add Nearby Port
+
+					.cell-xs.offset-top-15.offset-xs-top-0
+						.form-group
+							label.form-group-label To
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option Madrid (17)
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+						.form-group
+							label.checkbox-inline
+								input(name="input-group-radio", value="checkbox-2", type="checkbox")
+								| Add Nearby Port
+
+					.cell-md-1-5.offset-top-10.offset-md-top-0
+						.form-group
+							label.form-group-label Theme
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option Expedition
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+
+				.range.offset-top-15
+					.cell-xs
+						.form-group
+							label.form-group-label Ship
+							//Select 2
+							select.form-control.select-filter(data-minimum-results-for-search="Infinity")
+								option L'AUSTRAL 
+								option(value="2") Demo Item 1-1
+								option(value="3") Demo Item 1-2
+								option(value="4") Demo Item 1-2
+								option(value="5") Demo Item 2-1
+								option(value="6") Demo Item 2-2
+								option(value="7") Demo Item 2-3
+
+					.cell-xs.offset-top-15.offset-xs-top-0
+						.form-group.form-group-date
+							label.form-group-label Date
+							input.form-control(type="text" data-time-picker="date" data-constraints="@Required" name='return' placeholder='07/09/17')
+
+					.cell-sm-6.cell-lg-4.offset-top-15.offset-sm-top-0
+						.range
+							.cell-xs-6
+								.form-group
+									label.form-group-label Adults (16+)
+									input.form-control(type="number" min='0' value="2")
+							.cell-xs-6.offset-top-15.offset-xs-top-0
+								.form-group
+									label.form-group-label Children
+									input.form-control(type="number" min='0' value="0")
+					.cell-lg-clear-flex.cell-sm-bottom.cell-lg.text-center.text-lg-right.offset-top-15.offset-lg-top-0
+						button.btn.btn-primary.btn-sm.btn-naira.btn-naira-up
+							span.icon.fa-search
+							span search cruises
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-8
+					p Special Offers
+
+				.range.offset-top-15
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Alaska
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Antarctica & Patagonia
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Arabia
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Africa & India
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Asia
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Australia & South Pacific
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Canada 
+						
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| New England
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Caribbean
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Extended Explorations
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Hawaii & Tahiti
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Mexico
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| New Zealand
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Pacific Coast 
+								
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Panama Canal
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| South America & Antarctica
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Mediterranean
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Northern Europe
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Transatlantic
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Dubrovnik, Croatia
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Tallinn, Estonia 
+	div
+		form(method='post', action='#').small
+			.range
+				.cell-md-8
+					p Our Ships
+
+				.range.offset-top-15
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Cloud
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Wind
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Shadow
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Whisper
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Spirit
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Muse
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Explorer 
+
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Galapagos
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Discoverer
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Silver Cloud Expedition
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| M/Y Variety Voyager
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| M/Y Harmony V
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| M/Y Harmony G
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| M/Y Callisto
+
+					ul.cell-sm-4
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Diadema
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Fascinosa
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Favolosa
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Deliziosa
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Pacifica
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Luminosa
+						li
+							.form-group
+								label.checkbox-inline
+									input(name="input-group-radio", value="checkbox-1", type="checkbox")
+									| Costa Mediterranea

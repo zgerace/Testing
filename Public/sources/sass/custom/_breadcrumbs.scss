@@ -1,0 +1,50 @@
+//
+// Breadcrumb
+// --------------------------------------------------
+
+.breadcrumb{
+  background-color: transparent;
+  padding: 0;
+  margin-top: 12px;
+
+  @media (min-width: $screen-lg-min) {
+    margin-top: 105px;
+  }
+  
+  color: #cacaca;
+
+  a{
+    color: $brand-info;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  li + li:before{
+    content: '\f178';
+    font-family: FontAwesome;
+    font-size: 11px;
+    color: $gray;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 0 18px;
+    }
+  }
+
+  &-wrapper{
+    position: relative;
+    z-index: 10;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(0,0,0,.3) 0%, transparent 100%);
+      z-index: -1;
+    }
+  }
+}

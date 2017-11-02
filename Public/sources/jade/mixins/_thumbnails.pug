@@ -1,0 +1,49 @@
+//- Thumbnail
+
+//- title - title
+//- link - href of btn
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin thumbnail-btn(title, link, imgSrc, imgW, imgH)
+	// Thumbnail
+	.thumbnail-btn
+		img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block.thumbnail-img
+		.caption
+			h4=title
+			a(href=link).btn.btn-primary.btn-xs read more
+
+
+//- Thumbnail type 1
+
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin thumbnail-variant-1(imgSrc, imgW, imgH)
+	// Thumbnail
+	.thumbnail-variant-1
+		div
+			img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+		block
+
+
+//- Thumbnail type 3
+
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+
+mixin thumbnail-variant-3(title, subtitle, text, imgSrc, imgW, imgH)
+	// Thumbnail
+	.thumbnail-variant-3
+		div.thumbnail-image
+			img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+		.caption
+			h4.text-ubold=title
+			p.offset-top-2.text-italic.text-gray=subtitle
+
+			p.offset-top-10.offset-md-top-20=text
+			ul.list-marked.list-marked-no-padding.list-marked-flex.text-base
+				block

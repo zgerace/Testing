@@ -1,0 +1,184 @@
+//- Post
+
+//- title - Post title
+//- date - Post date
+//- link - Post link href
+//- imgSrc - path to image
+//- imgW - image width
+//- imgH - image height
+//- tag - Post tag
+//- comments - Post comments
+//- views - Post views
+//- month - Post month
+
+mixin post-sm(title, date, link, imgSrc, imgW, imgH)
+	// Post
+	.unit.unit-sm-horizontal.unit-md-horizontal.unit-lg-horizontal
+		.unit-left
+			img(src=imgSrc, width=imgW, height=imgH, alt="").center-block.img-responsive
+		.unit-body
+			h5.text-bold(style='line-height: 28px;')
+				a(href=link).text-info-dr!=title
+			hr.divider.divider-wide
+			p
+				span.text-middle.text-gray-light.icon.icon-xs.mdi.mdi-calendar-clock
+				span.text-middle.inset-left-8=date
+
+
+//- Post default variant
+
+mixin post-default(title, tag, comments, views, link, text, imgSrc, imgW, imgH)
+	// Post
+	.post-blog
+		.post-blog-img
+			a(href=link)
+				img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+		h3.text-bold.post-blog-title
+			a(href=link).text-primary-dr=title
+		p=text
+		.post-blog-meta
+			ul.group-lg
+				li.post-blog-tag
+					span.icon
+					a(href='blog-modern.html').text-base.text=tag
+				li.post-blog-comments
+					span.icon
+					span.text-base.text=comments
+				li.post-blog-views
+					span.icon
+					span.text-base.text=views
+
+
+//- Post grid variant
+
+mixin post-grid(title, tag, comments, views, link, text, imgSrc, imgW, imgH, date, month)
+	// Post grid style
+	.post-blog-grid.post
+		img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+		.caption
+			.post-blog-date=date
+			.small=month
+		.post-blog-grid-body
+			h4.post-blog-grid-title.text-bold
+				a(href=link).text-primary-dr=title
+			p=text
+		.post-blog-grid-footer
+			.post-blog-meta
+				ul
+					li.post-blog-tag
+						span.icon
+						a(href='blog-modern.html').text=tag
+					li.post-blog-comments
+						span.icon
+						span.text=comments
+					li.post-blog-views
+						span.icon
+						span.text=views
+
+
+//- Post masonry variant
+
+mixin post-masonry(title, tag, comments, views, link, text, imgSrc, imgW, imgH, date, month)
+	// Post masonry style
+	.post-blog-masonry.post
+		img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block
+		.caption
+			.post-blog-date=date
+			.small=month
+		.post-blog-masonry-body
+			.post-blog-meta
+				ul.group-42
+					li.post-blog-tag
+						span.icon
+						a(href='blog-modern.html').text=tag
+					li.post-blog-comments
+						span.icon
+						span.text=comments
+					li.post-blog-views
+						span.icon
+						span.text=views
+
+			h4.post-blog-masonry-title.text-bold
+				a(href=link).text-primary-dr=title
+			p=text
+
+
+//- Post modern variant
+
+mixin post-modern(title, tag, comments, views, link, text, imgSrc, imgW, imgH, date, month)
+	// Post modern style
+	.post-blog-modern.post
+		.post-blog-modern-top
+			.unit.unit-sm-horizontal.unit-lg-vertical.unit-middle.text-sm-left.text-lg-center
+				.unit-left
+					.post-author-img
+						img(src='images/user-15.jpg' width='120' height='120' alt='').img-responsive.center-block.img-circle
+				.unit-body
+					.text-bold.text-info-dr Joseph Morrison
+					.text-italic Sep 21, 2016 at 4:03pm
+		.post-blog-modern-body
+			a(href=link).reveal-block
+				img(src=imgSrc width=imgW height=imgH alt='').img-responsive.center-block.post-blog-modern-img
+			h4.post-blog-modern-title.text-bold
+				a.text-info-dr(href=link)=title
+			p=text
+			.range-xs-middle.range.offset-top-20
+				.cell-sm-8.text-sm-right.cell-sm-push-1
+					.post-blog-modern-comments
+						span.icon
+						span.text=comments
+					.post-blog-modern-views
+						span.icon
+						span.text=views
+
+				.cell-sm-4.text-sm-left.offset-top-20.offset-sm-top-0
+					a(href=link).btn.btn-primary.btn-xs read more
+
+//- Post type 1
+
+mixin post-type-1(title, text, imgSrc, imgW, imgH, date, tag, views, link, author, comments)
+	// Post type 1
+	.post-blog.post-blog-type-1
+		img(src=imgSrc width=imgW height=imgH alt='').img-responsive
+		h4.post-blog-title
+			a(href=link)=title
+		.post-meta
+			p='by '
+				a(href='blog-grid.html').text-gray=author
+			p
+				a(href='blog-grid.html').text-gray=tag
+		hr
+
+		p.text-base=text
+		a(href=link).btn.btn-primary.btn-xxs.btn-no-shadow read more
+
+		hr
+
+		.post-blog-meta
+			.post-blog-date
+				span.icon
+				span.text=date
+
+			.post-blog-comments
+				span.icon
+				a(href='blog-single-post.html').text=comments
+
+			.post-blog-views
+				span.icon
+				span.text=views
+
+
+//- Post type 2
+
+mixin post-type-2(title, text, imgSrc, imgW, imgH, date, link, tag)
+	// Post type 2
+	.post-blog.post-blog-type-2
+		img.img-responsive(src=imgSrc, width=imgW, height=imgH, alt='')
+		a(href='blog-modern.html').label.label-primary=tag
+		.post-blog-caption
+			p.text-italic.text-gray=date
+			h4.post-blog-title.text-bold
+				a(href=link)=title
+			p.text-base=text
+
+			a(href=link).post-blog-link Read more
